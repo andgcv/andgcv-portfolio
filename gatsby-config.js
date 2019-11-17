@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `André Gonçalves | Back-end Engineer`,
-    description: `I'm André, a 22 years old ambitious and hand-on Back-end Engineer, from Portugal.`,
+    title: `André Gonçalves | Software Engineer`,
+    description: `I'm André, a 22 years old ambitious and hands-on Software Engineer, from Portugal.`,
     author: `André Gonçalves`,
     // TODO: Add siteUrl
     social: {
@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `André Gonçalves | Back-end Engineer`,
+        name: `André Gonçalves | Software Engineer`,
         short_name: `André`,
         // TODO: Add icon,
         start_url: `/`,
