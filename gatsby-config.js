@@ -1,9 +1,46 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `André Gonçalves | Back-end Engineer`,
+    description: `I'm André, a 22 years old ambitious and hand-on Back-end Engineer, from Portugal.`,
+    author: `André Gonçalves`,
+    siteUrl: '',
+    social: {
+      email: 'andgcv@gmail.com',
+      github: 'andgcv',
+      linkedin: 'andgcv',
+      twitter: 'andregcv'
+    }
+  },
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `André Gonçalves | Back-end Engineer`,
+        short_name: `André`,
+        icon: ``,
+        start_url: `/`,
+        background_color: `#282c37`,
+        theme_color: `#2B90D9`,
+        display: `standalone`,
+      },
+    },
+    `gatsby-plugin-offline`
+  ]
 }
