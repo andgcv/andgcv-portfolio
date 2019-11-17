@@ -3,7 +3,7 @@ module.exports = {
     title: `André Gonçalves | Back-end Engineer`,
     description: `I'm André, a 22 years old ambitious and hand-on Back-end Engineer, from Portugal.`,
     author: `André Gonçalves`,
-    siteUrl: '',
+    // TODO: Add siteUrl
     social: {
       email: 'andgcv@gmail.com',
       github: 'andgcv',
@@ -34,7 +34,7 @@ module.exports = {
       options: {
         name: `André Gonçalves | Back-end Engineer`,
         short_name: `André`,
-        icon: ``,
+        // TODO: Add icon,
         start_url: `/`,
         background_color: `#282c37`,
         theme_color: `#2B90D9`,
