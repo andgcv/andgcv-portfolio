@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "andgcv-portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Personal website where you can get to know me a little better and see what I've been up to lately!",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
