@@ -5,11 +5,12 @@ import Footer from '../components/footer'
 const IndexPage = () => {
     return (
         <div>
-            <Header />
+            <Header
+                title="Home"
+                subtitle="I'm André"
+            />
 
-            <h1>Hi there!</h1>
-            <h1>I'm André</h1>
-            <h2>An ambitious, hands-on Back-end Engineer!</h2>
+            <p>An ambitious, hands-on Back-end Engineer!</p>
 
             <Footer />
         </div>

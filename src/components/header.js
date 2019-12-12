@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({ title, subtitle }) => {
     return (
         <header>
-            <p>Placeholder for Header</p>
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
         </header>
     )
 }
