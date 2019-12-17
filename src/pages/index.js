@@ -1,19 +1,18 @@
 import React from 'react'
-import Header from '../components/header'
-import Footer from '../components/footer'
+// Layout
+import Layout from '../components/layout'
+// Sections
+import Home from '../sections/home'
+import About from '../sections/about'
+import Portfolio from '../sections/portfolio'
+import Interests from '../sections/interests'
+import Contacts from '../sections/contact'
 
 const IndexPage = () => {
     return (
-        <div>
-            <Header
-                title="Home"
-                subtitle="I'm André"
-            />
-
-            <p>An ambitious, hands-on Back-end Engineer!</p>
-
-            <Footer />
-        </div>
+        <Layout>
+            <p>Hi!</p>
+        </Layout>
     )
 }
 
