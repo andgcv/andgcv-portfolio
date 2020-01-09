@@ -1,6 +1,6 @@
 import React from 'react'
 // Layout
-import Layout from '../components/layout'
+import Layout from '../components/layout/layout'
 // Sections
 import Home from '../sections/home'
 import About from '../sections/about'

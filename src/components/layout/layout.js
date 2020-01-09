@@ -1,23 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-// Header and Footer
-import Header from './header'
-import Footer from './footer'
-const Layout = styled.div`
+import Footer from '../ui/footer'
+
+const Container = styled.div`
     margin: 1rem auto;
     max-width: 70rem;
     display: flex;
     flex-direction: column;
 `
 
+const StyledMain = styled.main`
+    
+`
+
 export default ({ children }) => (
-    <Layout>
-            <Header title="Home" subtitle="I'm André">
-                <p>An ambitious, naturally curious Software Engineer!</p>
-            </Header>
+    //ThemeProvider, SEO, NavBar
 
-            <div>{children}</div>
-
+    <Container>
+            <StyledMain>{children}</StyledMain>
             <Footer />
-    </Layout>
+    </Container>
 )
