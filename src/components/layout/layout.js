@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Footer from '../ui/footer'
 
+// Global Styles
+import GlobalStyles from '../ui/global-styles'
+
 const Container = styled.div`
     margin: 1rem auto;
     max-width: 70rem;
@@ -18,6 +21,6 @@ export default ({ children }) => (
 
     <Container>
             <StyledMain>{children}</StyledMain>
-            <Footer />
+            <GlobalStyles />
     </Container>
 )
