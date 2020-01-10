@@ -1,7 +1,8 @@
 import { createGlobalStyle as GlobalStyle } from 'styled-components'
+import Theme from './theme'
 
 export default GlobalStyle`
     body {
-        background-color: #282c37;
+        background-color: ${props => props.theme.colors.deepDarkBlue};
     }
 `

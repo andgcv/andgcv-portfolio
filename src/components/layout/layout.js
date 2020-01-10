@@ -1,9 +1,11 @@
 import React from 'react'
+// Styles
 import styled from 'styled-components'
+import GlobalStyles from '../ui/global-styles'
+import Theme from '../ui/theme'
+// UI
 import Footer from '../ui/footer'
 
-// Global Styles
-import GlobalStyles from '../ui/global-styles'
 
 const Container = styled.div`
     margin: 1rem auto;
@@ -18,9 +20,10 @@ const StyledMain = styled.main`
 
 export default ({ children }) => (
     //ThemeProvider, SEO, NavBar
-
-    <Container>
-            <StyledMain>{children}</StyledMain>
-            <GlobalStyles />
-    </Container>
+    <Theme>
+        <Container>
+                <StyledMain>{children}</StyledMain>
+                <GlobalStyles />
+        </Container>
+    </Theme>
 )
