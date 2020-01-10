@@ -12,10 +12,10 @@ const Title = styled.h1`
     margin-bottom: 2rem;
     line-height: 1.3;
     font-size: 3rem;
-    color: #9baec8;
+    color: ${props => props.theme.colors.desaturatedSkyBlue};
 
     & span {
-        color: #d9e1e8;
+        color: ${props => props.theme.colors.lightSkyBlue};
     }
 `
 
@@ -23,7 +23,7 @@ const SubTitle = styled.h2`
     margin: 0;
     margin-bottom: 7rem;
     font-size: 1.8rem;
-    color: #9baec8;
+    color: ${props => props.theme.colors.desaturatedSkyBlue};
 `
 
 const Home = () => {
