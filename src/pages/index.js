@@ -11,7 +11,7 @@ import Contacts from '../sections/contact'
 const IndexPage = () => {
     return (
         <Layout>
-            <p>Hi!</p>
+            <Home />
             <About />
         </Layout>
     )
