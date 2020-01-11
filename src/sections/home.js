@@ -9,9 +9,10 @@ const HomeWrapper = styled.div`
 
 const Title = styled.h1`
     margin: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     line-height: 1.3;
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 500;
     color: ${props => props.theme.colors.desaturatedSkyBlue};
 
     & span {
@@ -22,7 +23,8 @@ const Title = styled.h1`
 const SubTitle = styled.h2`
     margin: 0;
     margin-bottom: 7rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: 400;
     color: ${props => props.theme.colors.desaturatedSkyBlue};
 `
 
