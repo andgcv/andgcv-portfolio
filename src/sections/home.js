@@ -4,7 +4,7 @@ import { Link } from 'react-scroll'
 import Button from '../components/ui/button'
 
 const HomeWrapper = styled.div`
-
+    height: 100vh;
 `
 
 const Title = styled.h1`

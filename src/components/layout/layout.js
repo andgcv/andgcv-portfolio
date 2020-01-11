@@ -8,7 +8,7 @@ import Footer from '../ui/footer'
 
 
 const Container = styled.div`
-    margin: 1rem auto;
+    margin: 0 auto;
     max-width: 90rem;
     display: flex;
     flex-direction: column;

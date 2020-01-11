@@ -7,8 +7,7 @@ const theme = {
         desaturatedSkyBlue: "#9baec8",
         lightSkyBlue: "#d9e1e8",
         vibrantBlue: "#2b90d9"
-    },
-    fonts: ["Menlo", "sans-serif"]
+    }
 }
 
 const Theme = ({ children }) => (
