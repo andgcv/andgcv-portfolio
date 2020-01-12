@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import Button from '../components/ui/button'
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
 const HomeWrapper = styled.div`
     height: 100vh;
@@ -34,7 +35,7 @@ const Home = () => {
             <Title>Hi there <span role="img" aria-label="Greeting hand emoji">✋🏻</span>
                 <br/>I'm <span>André</span></Title>
             <SubTitle>An ambitious, naturally curious Software Engineer!</SubTitle>
-            <Button text="about me" />
+            <Button text="about me" icon={faInfoCircle} />
         </HomeWrapper>
     )
 }
