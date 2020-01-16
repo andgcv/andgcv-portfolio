@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-scroll'
 import Button from '../components/ui/button'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 

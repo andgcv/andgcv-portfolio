@@ -3,6 +3,8 @@ import React from 'react'
 import styled from 'styled-components'
 import GlobalStyles from '../ui/global-styles'
 import Theme from '../ui/theme'
+// Nav
+import NavBar from '../nav/navbar'
 // UI
 import Footer from '../ui/footer'
 
@@ -15,13 +17,14 @@ const Container = styled.div`
 `
 
 const StyledMain = styled.main`
-    
+
 `
 
 export default ({ children }) => (
-    //ThemeProvider, SEO, NavBar
+    // SEO, NavBar
     <Theme>
         <Container>
+            <NavBar />
             <GlobalStyles />
             <StyledMain>{children}</StyledMain>
         </Container>
