@@ -1,10 +1,13 @@
 import React from 'react'
+import Heading from '../components/ui/heading'
 
 const About = () => {
     return (
         <div>
-            <h1>"about me"</h1>
-            <h2>So you do want to know more about me, that's wonderful!</h2>
+            <Heading 
+                title='"about me"' 
+                subtitle="So you do want to know more about me, that's wonderful!" />
+
         </div>
     )
 }
