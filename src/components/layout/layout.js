@@ -11,6 +11,7 @@ import Footer from '../ui/footer'
 
 const Container = styled.div`
     margin: 0 auto;
+    padding-top: 10vh;
     max-width: 90rem;
     display: flex;
     flex-direction: column;
@@ -23,8 +24,8 @@ const StyledMain = styled.main`
 export default ({ children }) => (
     // SEO, NavBar
     <Theme>
+        <NavBar />
         <Container>
-            <NavBar />
             <GlobalStyles />
             <StyledMain>{children}</StyledMain>
         </Container>

@@ -5,6 +5,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
 const HomeWrapper = styled.div`
     height: 100vh;
+    margin-top: 7rem;
 `
 
 const Title = styled.h1`
