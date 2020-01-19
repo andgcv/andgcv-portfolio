@@ -3,12 +3,14 @@ import styled from 'styled-components'
 // UI
 import Button from '../components/ui/button'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import DownArrow from '../components/ui/down-arrow'
 
 const HomeWrapper = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 5vw;
 `
 
 const Title = styled.h1`
@@ -39,6 +41,7 @@ const Home = () => {
                 <br/>I'm <span>André</span></Title>
             <SubTitle>An ambitious, naturally curious Software Engineer!</SubTitle>
             <Button text="about me" icon={faInfoCircle} />
+            <DownArrow />
         </HomeWrapper>
     )
 }

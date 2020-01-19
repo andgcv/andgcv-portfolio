@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+// Icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
@@ -17,6 +18,7 @@ const StyledButton = styled.button`
     font-weight: 500;
     font-size: 1.4rem;
     padding: 0.25vh 1vw;
+    cursor: pointer;
     border: none;
     box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
 `
