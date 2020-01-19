@@ -3,6 +3,8 @@ import styled from 'styled-components'
 // Icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+// Navigation
+import { Link } from 'react-scroll'
 
 const ArrowWrapper = styled.div`
     position: absolute;
@@ -24,7 +26,9 @@ const ArrowWrapper = styled.div`
 const DownArrow = () => {
     return (
         <ArrowWrapper>
-            <FontAwesomeIcon icon={faAngleDown} />
+            <Link to="about-section" smooth={true} spy={true}>
+                <FontAwesomeIcon icon={faAngleDown} />
+            </Link>
         </ArrowWrapper>
     )
 }

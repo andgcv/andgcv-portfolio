@@ -69,7 +69,7 @@ const AboutResumesContainer = styled.div`
 
 const About = () => {
     return (
-        <AboutWrapper>
+        <AboutWrapper id="about-section">
             <Heading 
                 title='"about me"' 
                 subtitle="So you do want to know more about me, that's wonderful!" />
