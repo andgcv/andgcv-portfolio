@@ -11,13 +11,13 @@ const Title = styled.h1`
     margin-bottom: 3vh;
 
     & span {
-        color: ${props => props.theme.colors.desaturatedSkyBlue};
+        color: ${props => props.theme.colors.lightSkyBlue};
         margin: 0 3vw;
     }
 `
 
 const SubTitle = styled.h2`
-    color: ${props => props.theme.colors.desaturatedSkyBlue};
+    color: ${props => props.theme.colors.lightSkyBlue};
     font-weight: 400;
     font-size: 1.4rem;
 `

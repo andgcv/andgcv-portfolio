@@ -24,7 +24,7 @@ const StyledButton = styled.button`
 const Button = (props) => {
     return (
         <StyledButton >
-            <FontAwesomeIcon icon={props.icon} style={{marginRight: 0.5 + 'vw'}} />
+            <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
             {props.text}
         </StyledButton>
     )

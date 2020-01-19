@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+// UI
 import Button from '../components/ui/button'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
