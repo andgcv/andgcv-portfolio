@@ -86,8 +86,8 @@ const About = () => {
                 </AboutTextContainer>
             </AboutContainer>
             <AboutResumesContainer>
-                <Button text="EN Resume" icon={faFileAlt} />
-                <Button text="PT Resume" icon={faFileAlt} />
+                <Button text="en resume" icon={faFileAlt} />
+                <Button text="pt resume" icon={faFileAlt} />
             </AboutResumesContainer>
         </AboutWrapper>
     )

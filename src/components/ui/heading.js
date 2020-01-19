@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const HeadingWrapper = styled.div`
     text-align: center;
@@ -32,6 +33,16 @@ const Heading = (props) => {
             <SubTitle>{props.subtitle}</SubTitle>
         </HeadingWrapper>
     )
+}
+
+Heading.propTypes = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired
+}
+
+Heading.defaultProps = {
+    title: '"title"',
+    subtitle: "Sub Title"
 }
 
 export default Heading

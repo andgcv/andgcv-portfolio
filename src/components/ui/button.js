@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
@@ -30,9 +31,13 @@ const Button = (props) => {
     )
 }
 
-/*Button.propTypes = {
-    text: React.PropTypes.string.isRequired,
-    icon: React.PropTypes.string
-}*/
+Button.propTypes = {
+    text: PropTypes.string.isRequired,
+    icon: PropTypes.string
+}
+
+Button.defaultProps = {
+    text: "button"
+}
 
 export default Button
