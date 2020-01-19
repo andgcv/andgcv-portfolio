@@ -10,6 +10,8 @@ const StyledButton = styled.button`
     color: ${props => props.theme.colors.lightSkyBlue};
     min-width: 25vh;
     min-height: 8vh;
+    width: 25vh;
+    height: 8vh;
     font-family: ${props => props.theme.fonts[0]};
     font-weight: 500;
     font-size: 2em;

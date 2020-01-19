@@ -11,7 +11,9 @@ const NavBarWrapper = styled.nav`
     align-items: center;
     margin: 0;
     padding: 0;
-    height: 6vh;
+    min-height: 6vh;
+    height: 8vh;
+    min-width: 100%;
     width: 100%;
     vertical-align: middle;
     font-size: 1.7rem;
