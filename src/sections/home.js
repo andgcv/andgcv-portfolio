@@ -4,11 +4,11 @@ import Button from '../components/ui/button'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
 const HomeWrapper = styled.div`
+    min-height: 100vh;
     height: 100vh;
-    margin-top: 7rem;
     display: flex;
     flex-direction: column;
-    align-self: center;
+    justify-content: center;
 `
 
 const Title = styled.h1`
