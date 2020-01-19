@@ -7,7 +7,7 @@ const HeadingWrapper = styled.div`
 
 const Title = styled.h1`
     color: ${props => props.theme.colors.vibrantBlue};
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-bottom: 3vh;
 
     & span {
@@ -19,7 +19,7 @@ const Title = styled.h1`
 const SubTitle = styled.h2`
     color: ${props => props.theme.colors.desaturatedSkyBlue};
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.4rem;
 `
 
 

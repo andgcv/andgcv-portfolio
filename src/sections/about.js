@@ -15,6 +15,16 @@ const AboutContainer = styled.div`
 
 const Banner = styled.img`
     min-height: 100%;
+    min-width: 10vw;
+    width: 20vw;
+    box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
+`
+
+const AboutTextContainer = styled.p`
+    min-height: 100%;
+    min-width: 60vw;
+    width: 60vw;
+    color: ${props => props.theme.colors.lightSkyBlue};
 `
 
 // TODO: Add Banner, AboutText,
@@ -26,6 +36,10 @@ const About = () => {
                 title='"about me"' 
                 subtitle="So you do want to know more about me, that's wonderful!" />
             <AboutContainer>
+                <Banner src="../images/me-1.jpeg" alt="Photo of the website's owner" />
+                <AboutTextContainer>
+
+                </AboutTextContainer>
             </AboutContainer>
         </AboutWrapper>
     )

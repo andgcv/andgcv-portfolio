@@ -16,7 +16,7 @@ const NavBarWrapper = styled.nav`
     min-width: 100vw;
     width: 100vw;
     vertical-align: middle;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     background-color: ${props => props.theme.colors.deepDarkBlue};
     box-shadow: 20vw 5px ${props => props.theme.colors.lightSkyBlue};
 `

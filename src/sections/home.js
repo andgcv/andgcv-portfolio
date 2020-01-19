@@ -14,7 +14,7 @@ const Title = styled.h1`
     margin: 0;
     margin-bottom: 4vh;
     line-height: 1.3;
-    font-size: 4rem;
+    font-size: 3.4rem;
     font-weight: 500;
     color: ${props => props.theme.colors.desaturatedSkyBlue};
 
@@ -26,7 +26,7 @@ const Title = styled.h1`
 const SubTitle = styled.h2`
     margin: 0;
     margin-bottom: 7vh;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: ${props => props.theme.colors.desaturatedSkyBlue};
 `

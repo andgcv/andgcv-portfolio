@@ -14,7 +14,7 @@ const StyledButton = styled.button`
     height: 8vh;
     font-family: ${props => props.theme.fonts[0]};
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.4rem;
     padding: 0.25vh 1vw;
     border: none;
     box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
