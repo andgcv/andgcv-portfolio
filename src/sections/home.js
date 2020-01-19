@@ -40,7 +40,7 @@ const Home = () => {
             <Title>Hi there <span role="img" aria-label="Greeting hand emoji">✋🏻</span>
                 <br/>I'm <span>André</span></Title>
             <SubTitle>An ambitious, naturally curious Software Engineer!</SubTitle>
-            <Button text="about me" icon={faInfoCircle} />
+            <Button text="about me" icon={faInfoCircle} target="about-section" />
             <DownArrow />
         </HomeWrapper>
     )

@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 // Icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// Navigation
+import { Link } from 'react-scroll'
 
 
 /* TODO: 3 Buttons, 1 small, 1 medium, 1 large
@@ -23,19 +25,21 @@ const StyledButton = styled.button`
     box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
 `
 
-// TODO: Will take in text (required) and an optional icon
 const Button = (props) => {
     return (
-        <StyledButton >
-            <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
-            {props.text}
-        </StyledButton>
+        <Link to={props.target} smooth={true} spy={true}>
+            <StyledButton >
+                <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
+                {props.text}
+            </StyledButton>
+        </Link>
     )
 }
 
 Button.propTypes = {
     text: PropTypes.string.isRequired,
-    icon: PropTypes.string
+    icon: PropTypes.string,
+    target: PropTypes.string
 }
 
 Button.defaultProps = {
