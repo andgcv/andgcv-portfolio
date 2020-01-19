@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 // UI
 import Button from '../components/ui/button'
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import DownArrow from '../components/ui/down-arrow'
 
 const HomeWrapper = styled.div`
@@ -40,7 +39,7 @@ const Home = () => {
             <Title>Hi there <span role="img" aria-label="Greeting hand emoji">✋🏻</span>
                 <br/>I'm <span>André</span></Title>
             <SubTitle>An ambitious, naturally curious Software Engineer!</SubTitle>
-            <Button text="about me" icon={faInfoCircle} target="about-section" />
+            <Button text="about me" target="about-section" />
             <DownArrow />
         </HomeWrapper>
     )
