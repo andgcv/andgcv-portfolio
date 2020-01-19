@@ -8,11 +8,11 @@ const HeadingWrapper = styled.div`
 const Title = styled.h1`
     color: ${props => props.theme.colors.vibrantBlue};
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3vh;
 
     & span {
         color: ${props => props.theme.colors.desaturatedSkyBlue};
-        margin: 0 3rem;
+        margin: 0 3vw;
     }
 `
 

@@ -5,7 +5,6 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
 const HomeWrapper = styled.div`
     min-height: 100vh;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +12,7 @@ const HomeWrapper = styled.div`
 
 const Title = styled.h1`
     margin: 0;
-    margin-bottom: 4rem;
+    margin-bottom: 4vh;
     line-height: 1.3;
     font-size: 4rem;
     font-weight: 500;
@@ -26,7 +25,7 @@ const Title = styled.h1`
 
 const SubTitle = styled.h2`
     margin: 0;
-    margin-bottom: 7rem;
+    margin-bottom: 7vh;
     font-size: 2rem;
     font-weight: 400;
     color: ${props => props.theme.colors.desaturatedSkyBlue};

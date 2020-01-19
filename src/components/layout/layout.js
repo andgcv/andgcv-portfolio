@@ -11,7 +11,7 @@ import Footer from '../ui/footer'
 
 const Container = styled.div`
     margin: 0 auto;
-    max-width: 150rem;
+    max-width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: stretch;

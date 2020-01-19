@@ -13,16 +13,16 @@ const NavBarWrapper = styled.nav`
     padding: 0;
     min-height: 6vh;
     height: 8vh;
-    min-width: 100%;
-    width: 100%;
+    min-width: 100vw;
+    width: 100vw;
     vertical-align: middle;
     font-size: 1.7rem;
     background-color: ${props => props.theme.colors.deepDarkBlue};
-    box-shadow: 30rem 5px ${props => props.theme.colors.lightSkyBlue};
+    box-shadow: 20vw 5px ${props => props.theme.colors.lightSkyBlue};
 `
 
 const BrandContainer = styled.div`
-    padding-left: 10vh;
+    padding-left: 10vw;
 
     & a {
         color: ${props => props.theme.colors.lightSkyBlue};
@@ -40,10 +40,10 @@ const BrandContainer = styled.div`
 
 const SectionsContainer = styled.div`
     text-align: right;
-    padding-right: 10vh;
+    padding-right: 10vw;
 
     & a {
-        margin-left: 10vh;
+        margin-left: 5vw;
         color: ${props => props.theme.colors.lightSkyBlue};
         text-decoration: none;
 
@@ -57,7 +57,7 @@ const SectionsContainer = styled.div`
     }
 
     & span {
-        margin-left: 10vh;
+        margin-left: 5vw;
         color: ${props => props.theme.colors.desaturatedSkyBlue};
     }
 `
