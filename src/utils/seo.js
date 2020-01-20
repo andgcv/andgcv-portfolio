@@ -1,77 +1,87 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 // TODO: Maybe add socials / email ?
-const SEO = ({ title, description, author, image, pathname }) => (
-    <StaticQuery
-    query={query}
-    render={({
-        site: {
-            siteMetadata: {
-                defaultTitle,
-                defaultDescription,
-                defaultAuthor,
-                siteUrl,
-                defaultImage,
+const SEO = ({ meta, lang, title }) => {
+    const { site } = useStaticQuery(
+        graphql`
+            query {
+                site {
+                    siteMetadata {
+                        title
+                        description
+                        author
+                        siteUrl
+                        siteImage
+                    }
+                }
             }
-        }
-    }) => {
-        const seo = {
-            title: title || defaultTitle,
-            description: description || defaultDescription,
-            author: author || defaultAuthor,
-            image: `${siteUrl}${image || defaultImage}`,
-            url: `${siteUrl}${pathname || '/'}`,
-        }
-        return (
-            <>
-                <Helmet title={seo.title}>
-                    <meta name="description" content={seo.description} />
-                    <meta name="author" content={seo.author} />
-                    <meta name="image" content={seo.image} />
-                    {seo.url && <meta property="og:url" content={seo.url} />}
-                    {seo.title && <meta property="og:title" content={seo.title} />}
-                    {seo.description && (
-                        <meta property="og:description" content={seo.description} />
-                    )}
-                    {seo.image && <meta property="og:image" content={seo.image} />}
-                </Helmet>
-            </>
-        )
-    }}
-  />
-)
+        `
+    )
+    
+    const metaTitle = site.siteMetadata.title 
+    const metaDescription = site.siteMetadata.description
+    const metaImage = `${site.siteMetadata.siteUrl}/${site.siteMetadata.siteImage}`
+
+    return (
+        <Helmet
+            htmlAttributes={{ lang }}
+            title={metaTitle || title}
+            meta={[
+                {
+                    name: `description`,
+                    content: metaDescription
+                },
+                {
+                    name: `author`,
+                    content: site.siteMetadata.author
+                },
+                {
+                    property: `og:title`,
+                    content: title
+                },
+                {
+                    property: `og:description`,
+                    content: metaDescription
+                },
+                {
+                    property: `og:author`,
+                    content: site.siteMetadata.author
+                },
+                {
+                    property: `og:type`,
+                    content: `website`
+                },
+                {
+                    property: 'og:image',
+                    content: metaImage,
+                }
+            ]}
+        />
+    )
+}
 
 export default SEO
 
-const query = graphql`
-    query SEO {
-        site {
-            siteMetadata {
-                defaultTitle: title
-                defaultDescription: description
-                defaultAuthor: author
-                siteUrl: url
-                defaultImage: image
-            }
-        }
-    }
-`
 
 SEO.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     author: PropTypes.string,
     image: PropTypes.string,
+    lang: PropTypes.string,
+    meta: PropTypes.arrayOf(PropTypes.object),
     pathname: PropTypes.string,
 }
 
 SEO.defaultProps = {
     title: "André | Software Engineer",
-    description: "I'm André, an ambitious, naturally curious Software Engineer, from Portugal.",
+    description: "",
     author: "André Gonçalves",
     image: null,
+    lang: "en",
+    meta: [],
     pathname: null,
 }

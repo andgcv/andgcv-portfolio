@@ -4,8 +4,8 @@ module.exports = {
     description: `I'm André, an ambitious, naturally curious Software Engineer, from Portugal.`,
     author: `André Gonçalves`,
     // TODO: Add url and image(logo)
-    url: ``,
-    image: ``,
+    siteUrl: ``,
+    siteImage: ``,
     social: {
       email: 'andgcv@gmail.com',
       github: 'andgcv',
