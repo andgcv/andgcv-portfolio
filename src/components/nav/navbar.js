@@ -16,7 +16,7 @@ const NavBarWrapper = styled.nav`
     min-width: 100vw;
     width: 100vw;
     vertical-align: middle;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     z-index: 10;
     background-color: ${props => props.theme.colors.deepDarkBlue};
     box-shadow: 20vw 5px ${props => props.theme.colors.lightSkyBlue};
@@ -44,7 +44,7 @@ const SectionsContainer = styled.div`
     padding-right: 10vw;
 
     & a {
-        margin-left: 5vw;
+        margin-left: 3vw;
         color: ${props => props.theme.colors.lightSkyBlue};
         text-decoration: none;
 
@@ -58,7 +58,7 @@ const SectionsContainer = styled.div`
     }
 
     & span {
-        margin-left: 5vw;
+        margin-left: 3vw;
         color: ${props => props.theme.colors.desaturatedSkyBlue};
     }
 `
