@@ -23,6 +23,8 @@ const SEO = ({ meta, lang, title }) => {
     
     const metaTitle = site.siteMetadata.title 
     const metaDescription = site.siteMetadata.description
+    const metaAuthor = site.siteMetadata.author
+    const metaUrl = `${site.siteMetadata.siteUrl}/`
     const metaImage = `${site.siteMetadata.siteUrl}/${site.siteMetadata.siteImage}`
 
     return (
@@ -36,7 +38,7 @@ const SEO = ({ meta, lang, title }) => {
                 },
                 {
                     name: `author`,
-                    content: site.siteMetadata.author
+                    content: metaAuthor
                 },
                 {
                     property: `og:title`,
@@ -48,11 +50,15 @@ const SEO = ({ meta, lang, title }) => {
                 },
                 {
                     property: `og:author`,
-                    content: site.siteMetadata.author
+                    content: metaAuthor
                 },
                 {
                     property: `og:type`,
                     content: `website`
+                },
+                {
+                    property: `og:url`,
+                    content: metaUrl
                 },
                 {
                     property: 'og:image',
@@ -73,7 +79,6 @@ SEO.propTypes = {
     image: PropTypes.string,
     lang: PropTypes.string,
     meta: PropTypes.arrayOf(PropTypes.object),
-    pathname: PropTypes.string,
 }
 
 SEO.defaultProps = {
@@ -83,5 +88,4 @@ SEO.defaultProps = {
     image: null,
     lang: "en",
     meta: [],
-    pathname: null,
 }
