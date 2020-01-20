@@ -12,10 +12,8 @@ import { Link } from 'react-scroll'
 const StyledButton = styled.button`
     background-color: ${props => props.theme.colors.vibrantBlue};
     color: ${props => props.theme.colors.lightSkyBlue};
-    min-width: 12vw;
-    min-height: 8vh;
-    width: 12vw;
-    height: 8vh;
+    width: 220px;
+    height: 80px;
     font-family: ${props => props.theme.fonts[0]};
     font-weight: 500;
     font-size: 1.4rem;
