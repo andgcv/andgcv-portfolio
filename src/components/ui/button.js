@@ -24,20 +24,33 @@ const StyledButton = styled.button`
 `
 
 const Button = (props) => {
-    return (
-        <Link to={props.target} smooth={true} spy={true}>
-            <StyledButton >
-                <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
-                {props.text}
-            </StyledButton>
-        </Link>
-    )
+    // If the Button's goal is a scroll to another section, then return a scroll link
+    if (props.scroll) {
+        return (
+            <Link to={props.destination} smooth={true} spy={true}>
+                <StyledButton >
+                    <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
+                    {props.text}
+                </StyledButton>
+            </Link>
+        )
+    // If the Button's goal is a link to a file or external sources, return an <a> Button
+    } else {
+        return (
+            <a href={props.destination} target="_blank" rel="noopener noreferrer">
+                <StyledButton >
+                    <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
+                    {props.text}
+                </StyledButton>
+            </a>
+        )
+    }
 }
 
 Button.propTypes = {
     text: PropTypes.string.isRequired,
     icon: PropTypes.string,
-    target: PropTypes.string
+    destination: PropTypes.string
 }
 
 Button.defaultProps = {

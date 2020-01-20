@@ -39,7 +39,7 @@ const Home = () => {
             <Title>Hi there <span role="img" aria-label="Greeting hand emoji">✋🏻</span>
                 <br/>I'm <span>André</span></Title>
             <SubTitle>An ambitious, naturally curious Software Engineer!</SubTitle>
-            <Button text="about me" target="about-section" />
+            <Button text="about me" destination="about-section" scroll />
             <DownArrow />
         </HomeWrapper>
     )
