@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
 // UI
 import Heading from '../components/ui/heading'
 import Button from '../components/ui/button'
@@ -68,6 +69,18 @@ const AboutResumesContainer = styled.div`
 // TODO: Map About text from .md file to paragraphs, add resumes to buttons, make reusable component for text styles maybe
 
 const About = () => {
+    const { site } = useStaticQuery(
+        graphql`
+            query {
+                site {
+                    siteMetadata {
+                        siteUrl
+                    }
+                }
+            }
+        `
+    )
+
     return (
         <AboutWrapper id="about-section">
             <Heading 
@@ -86,8 +99,8 @@ const About = () => {
                 </AboutTextContainer>
             </AboutContainer>
             <AboutResumesContainer>
-                <Button text="en resume" icon={faFileAlt} />
-                <Button text="pt resume" icon={faFileAlt} />
+                <Button destination={`${site.siteMetadata.siteUrl}/en-resume.pdf`} text="en resume" icon={faFileAlt} />
+                <Button destination={`${site.siteMetadata.siteUrl}/pt-resume.pdf`} text="pt resume" icon={faFileAlt} />
             </AboutResumesContainer>
         </AboutWrapper>
     )
