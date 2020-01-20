@@ -1,14 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `André Gonçalves | Software Engineer`,
-    description: `I'm André, a 22 years old ambitious and hands-on Software Engineer, from Portugal.`,
+    title: `André | Software Engineer`,
+    description: `I'm André, an ambitious, naturally curious Software Engineer, from Portugal.`,
     author: `André Gonçalves`,
-    // TODO: Add siteUrl
+    // TODO: Add url and image(logo)
+    url: ``,
+    image: ``,
     social: {
       email: 'andgcv@gmail.com',
       github: 'andgcv',
-      linkedin: 'andgcv',
-      twitter: 'andregcv'
+      linkedin: 'andgcv'
     }
   },
   plugins: [

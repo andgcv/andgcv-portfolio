@@ -7,6 +7,8 @@ import Theme from '../ui/theme'
 import NavBar from '../nav/navbar'
 // UI
 import Footer from '../ui/footer'
+// SEO
+import SEO from '../../utils/seo'
 
 
 const Container = styled.div`
@@ -25,6 +27,7 @@ const StyledMain = styled.main`
 export default ({ children }) => (
     // SEO, NavBar
     <Theme>
+        <SEO />
         <NavBar />
         <Container>
             <GlobalStyles />
