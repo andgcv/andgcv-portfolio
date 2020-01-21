@@ -4,7 +4,7 @@ module.exports = {
     description: `I'm André, an ambitious, naturally curious Software Engineer, from Portugal.`,
     author: `André Gonçalves`,
     // TODO: Add url and image(logo)
-    siteUrl: ``,
+    siteUrl: `localhost:8000`,
     siteImage: ``,
     social: {
       email: 'andgcv@gmail.com',
@@ -15,6 +15,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
