@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import * as Scroll from 'react-scroll'
+import { Link } from 'react-scroll'
 
 const NavBarWrapper = styled.nav`
     position: fixed;
@@ -35,6 +35,7 @@ const BrandContainer = styled.div`
 
         & :hover {
             color: ${props => props.theme.colors.desaturatedSkyBlue};
+            cursor: pointer;
         }
     }
 `
@@ -54,6 +55,7 @@ const SectionsContainer = styled.div`
 
         & :hover {
             color: ${props => props.theme.colors.desaturatedSkyBlue};
+            cursor: pointer;
         }
     }
 
@@ -63,20 +65,20 @@ const SectionsContainer = styled.div`
     }
 `
 
-// TODO: Brand logo; Change to scroll Links when sections are done
+// TODO: Brand logo, change color of current section
 
-const NavBar = (props) => {
+const NavBar = () => {
     return (
         <NavBarWrapper>
             <BrandContainer>
-                <a href="#home">home</a>
+            <Link to="home-section" smooth={true} spy={true}>home</Link>
             </BrandContainer>
             <SectionsContainer>
                 <span>&#x7b;</span>
-                <a href="#about">"about me"</a>
-                <a href="#portfolio">"portfolio"</a>
-                <a href="#interests">"interests"</a>
-                <a href="#contact">"contact"</a>
+                <Link to="about-section" smooth={true} spy={true}>"about me"</Link>
+                <Link to="portfolio-section" smooth={true} spy={true}>"portfolio"</Link>
+                <Link to="interests-section" smooth={true} spy={true}>"interests"</Link>
+                <Link to="contact-section" smooth={true} spy={true}>"contact"</Link>
                 <span>&#x7d;</span>
             </SectionsContainer>
         </NavBarWrapper>
