@@ -1,16 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
+// Layout
+import Wrapper from '../components/layout/wrapper'
 // UI
 import Heading from '../components/ui/heading'
 import Button from '../components/ui/button'
 import bannerPhoto from '../images/me-banner.jpeg'
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
-
-const AboutWrapper = styled.div`
-    min-height: 100vh;
-    padding-top: 10vh;
-`
 
 const AboutContainer = styled.div`
     padding-top: 5vh;
@@ -82,7 +79,7 @@ const About = () => {
     )
 
     return (
-        <AboutWrapper id="about-section">
+        <Wrapper id="about-section">
             <Heading 
                 title='"about me"' 
                 subtitle="So you do want to know more about me, that's wonderful!" />
@@ -102,7 +99,7 @@ const About = () => {
                 <Button destination={`${site.siteMetadata.siteUrl}/en-resume.pdf`} text="en resume" icon={faFileAlt} />
                 <Button destination={`${site.siteMetadata.siteUrl}/pt-resume.pdf`} text="pt resume" icon={faFileAlt} />
             </AboutResumesContainer>
-        </AboutWrapper>
+        </Wrapper>
     )
 }
 

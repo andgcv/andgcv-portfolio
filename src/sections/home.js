@@ -1,16 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+// Layout
+import Wrapper from '../components/layout/wrapper'
 // UI
 import Button from '../components/ui/button'
 import DownArrow from '../components/ui/down-arrow'
-
-const HomeWrapper = styled.div`
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 5vw;
-`
 
 const Title = styled.h1`
     margin: 0;
@@ -35,13 +29,13 @@ const SubTitle = styled.h2`
 
 const Home = () => {
     return (
-        <HomeWrapper>
+        <Wrapper home>
             <Title>Hi there <span role="img" aria-label="Greeting hand emoji">✋🏻</span>
                 <br/>I'm <span>André</span></Title>
             <SubTitle>An ambitious, naturally curious Software Engineer!</SubTitle>
             <Button text="about me" destination="about-section" scroll />
             <DownArrow />
-        </HomeWrapper>
+        </Wrapper>
     )
 }
 

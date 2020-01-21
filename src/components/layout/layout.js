@@ -25,7 +25,6 @@ const StyledMain = styled.main`
 `
 
 export default ({ children }) => (
-    // SEO, NavBar
     <Theme>
         <SEO />
         <NavBar />

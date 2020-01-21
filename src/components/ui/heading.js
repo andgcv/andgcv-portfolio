@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 const HeadingWrapper = styled.div`
     text-align: center;
+    margin-top: 10vh;
 `
 
 const Title = styled.h1`
