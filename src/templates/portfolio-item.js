@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
+// UI
 import Button from '../components/ui/button'
+import { faExternalLinkAlt, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
+import defaultItem from '../images/portfolio-items/default-item.jpg'
 
 const ItemWrapper = styled.div`
-    height: 300px;
     margin: 0 auto;
-    padding-top: 7vh;
+    padding: 7vh 0 14vh 0;
     display: flex;
     flex-direction: column;
 `
@@ -63,17 +66,17 @@ const ItemButtons = styled.div`
 const PortfolioItem = (props) => {
     return (
         <ItemWrapper>
-            <ItemHeading>"Test Item": "Awesome Title"</ItemHeading>
+            <ItemHeading>{props.title}</ItemHeading>
             <ItemContentContainer>
-                <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"/>
+                <img src={props.imgSrc} alt="Portfolio item screenshot" />
                 <ItemTechContainer>
                     <ItemDescription>
-                        <p>This exact web application! My personal website where you can connect with me, get to know me a little better and see what I’ve been up to lately! I wanted something easy to use, easy to maintain and with good SEO, and considering the fact that I had previous experience with React, Gatsby seemed like a great fit!</p>
-                        <p><span>React : Gatsby : Styled-components : Git</span></p>
+                        <p>{props.description}</p>
+                        <p><span>{props.techStack}</span></p>
                     </ItemDescription>
                     <ItemButtons>
-                        <Button text="visit" />
-                        <Button text="source" />
+                        <Button text="visit" icon={faExternalLinkAlt} />
+                        <Button text="source" icon={faCodeBranch} />
                     </ItemButtons>
                 </ItemTechContainer>
             </ItemContentContainer>
@@ -82,3 +85,18 @@ const PortfolioItem = (props) => {
 }
 
 export default PortfolioItem
+
+PortfolioItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    techStack: PropTypes.string.isRequired
+}
+
+// TODO: default img src should be a generic image
+PortfolioItem.defaultProps = {
+    title: '"Portfolio Item": "Awesome Project"',
+    imgSrc: defaultItem,
+    description: "This is an awesome project!",
+    techStack: "Love"
+}
