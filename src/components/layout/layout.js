@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import GlobalStyles from '../ui/global-styles'
 import Theme from '../ui/theme'
 // Nav
-import NavBar from '../nav/navbar'
+import NavBar from './nav/navbar'
 // UI
 import Footer from '../ui/footer'
 // SEO
