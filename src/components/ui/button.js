@@ -21,6 +21,7 @@ const StyledButton = styled.button`
     cursor: pointer;
     border: none;
     box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
+    border-radius: 20px;
 `
 
 const Button = (props) => {

@@ -22,6 +22,7 @@ const Banner = styled.img`
     object-fit: cover;
     border: none;
     box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
+    border-radius: 20px;
 `
 
 const AboutTextContainer = styled.div`
