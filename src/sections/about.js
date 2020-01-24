@@ -63,7 +63,7 @@ const AboutResumesContainer = styled.div`
     }
 `
 
-// TODO: Map About text from .md file to paragraphs, add resumes to buttons, make reusable component for text styles maybe
+// TODO: Map About text from .md file to paragraphs, make reusable component for text styles maybe
 
 const About = () => {
     const { site } = useStaticQuery(

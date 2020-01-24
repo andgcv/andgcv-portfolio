@@ -150,7 +150,6 @@ PortfolioItem.propTypes = {
     sourceDestination: PropTypes.string
 }
 
-// TODO: default img src should be a generic image
 PortfolioItem.defaultProps = {
     title: '"Portfolio Item": "Awesome Project"',
     imgSrc: defaultItem,
