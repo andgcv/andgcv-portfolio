@@ -29,7 +29,6 @@ const ItemContentContainer = styled.div`
         width: 40%;
         object-fit: cover;
         box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
-        border-radius: 20px;
     }
 `
 
