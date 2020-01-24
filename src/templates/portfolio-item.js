@@ -7,7 +7,6 @@ import { faExternalLinkAlt, faCodeBranch } from '@fortawesome/free-solid-svg-ico
 import defaultItem from '../images/portfolio-items/default-item.jpg'
 
 const ItemWrapper = styled.div`
-    margin: 0 auto;
     width: 80vw;
     padding: 7vh 0 14vh 0;
     display: flex;
@@ -18,12 +17,13 @@ const ItemHeading = styled.h3`
     font-size: 1.2rem;
     color: ${props => props.theme.colors.vibrantBlue};
     text-align: center;
+    padding-bottom: 3vh;
 `
 
 const ItemContentContainer = styled.div`
     display: flex;
     flex-direction: row;
-    padding: 3vh 10vw 0 10vw;
+    justify-content: center;
 
     & img {
         width: 40%;
