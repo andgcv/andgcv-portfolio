@@ -8,6 +8,7 @@ import defaultItem from '../images/portfolio-items/default-item.jpg'
 
 const ItemWrapper = styled.div`
     margin: 0 auto;
+    width: 80vw;
     padding: 7vh 0 14vh 0;
     display: flex;
     flex-direction: column;
@@ -25,7 +26,7 @@ const ItemContentContainer = styled.div`
     padding: 3vh 10vw 0 10vw;
 
     & img {
-        height: 300px;
+        width: 40%;
         object-fit: cover;
         box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
     }
