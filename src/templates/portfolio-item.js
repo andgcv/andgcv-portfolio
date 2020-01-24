@@ -29,10 +29,12 @@ const ItemContentContainer = styled.div`
         width: 40%;
         object-fit: cover;
         box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
+        border-radius: 20px;
     }
 `
 
 const ItemTechContainer = styled.div`
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -65,24 +67,77 @@ const ItemButtons = styled.div`
 `
 
 const PortfolioItem = (props) => {
-    return (
-        <ItemWrapper>
-            <ItemHeading>{props.title}</ItemHeading>
-            <ItemContentContainer>
-                <img src={props.imgSrc} alt="Portfolio item screenshot" />
-                <ItemTechContainer>
-                    <ItemDescription>
-                        <p>{props.description}</p>
-                        <p><span>{props.techStack}</span></p>
-                    </ItemDescription>
-                    <ItemButtons>
-                        <Button text="visit" icon={faExternalLinkAlt} />
-                        <Button text="source" icon={faCodeBranch} />
-                    </ItemButtons>
-                </ItemTechContainer>
-            </ItemContentContainer>
-        </ItemWrapper>
-    )
+    if (props.noVisit && props.noSource) {
+        return (
+            <ItemWrapper>
+                <ItemHeading>{props.title}</ItemHeading>
+                <ItemContentContainer>
+                    <img src={props.imgSrc} alt="Portfolio item screenshot" />
+                    <ItemTechContainer>
+                        <ItemDescription>
+                            <p>{props.description}</p>
+                            <p><span>{props.techStack}</span></p>
+                        </ItemDescription>
+                    </ItemTechContainer>
+                </ItemContentContainer>
+            </ItemWrapper>
+        )
+    } else if (props.noVisit) {
+        return (
+            <ItemWrapper>
+                <ItemHeading>{props.title}</ItemHeading>
+                <ItemContentContainer>
+                    <img src={props.imgSrc} alt="Portfolio item screenshot" />
+                    <ItemTechContainer>
+                        <ItemDescription>
+                            <p>{props.description}</p>
+                            <p><span>{props.techStack}</span></p>
+                        </ItemDescription>
+                        <ItemButtons>
+                            <Button text="source" icon={faCodeBranch} destination={props.sourceDestination} />
+                        </ItemButtons>
+                    </ItemTechContainer>
+                </ItemContentContainer>
+            </ItemWrapper>
+        )
+    } else if (props.noSource) {
+        return (
+            <ItemWrapper>
+                <ItemHeading>{props.title}</ItemHeading>
+                <ItemContentContainer>
+                    <img src={props.imgSrc} alt="Portfolio item screenshot" />
+                    <ItemTechContainer>
+                        <ItemDescription>
+                            <p>{props.description}</p>
+                            <p><span>{props.techStack}</span></p>
+                        </ItemDescription>
+                        <ItemButtons>
+                            <Button text="visit" icon={faExternalLinkAlt} destination={props.visitDestination} />
+                        </ItemButtons>
+                    </ItemTechContainer>
+                </ItemContentContainer>
+            </ItemWrapper>
+        )
+    } else {
+        return (
+            <ItemWrapper>
+                <ItemHeading>{props.title}</ItemHeading>
+                <ItemContentContainer>
+                    <img src={props.imgSrc} alt="Portfolio item screenshot" />
+                    <ItemTechContainer>
+                        <ItemDescription>
+                            <p>{props.description}</p>
+                            <p><span>{props.techStack}</span></p>
+                        </ItemDescription>
+                        <ItemButtons>
+                            <Button text="visit" icon={faExternalLinkAlt} destination={props.visitDestination} />
+                            <Button text="source" icon={faCodeBranch} destination={props.sourceDestination} />
+                        </ItemButtons>
+                    </ItemTechContainer>
+                </ItemContentContainer>
+            </ItemWrapper>
+        )
+    }
 }
 
 export default PortfolioItem
@@ -91,7 +146,9 @@ PortfolioItem.propTypes = {
     title: PropTypes.string.isRequired,
     imgSrc: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    techStack: PropTypes.string.isRequired
+    techStack: PropTypes.string.isRequired,
+    visitDestination: PropTypes.string,
+    sourceDestination: PropTypes.string
 }
 
 // TODO: default img src should be a generic image
