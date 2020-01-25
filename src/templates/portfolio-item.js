@@ -2,23 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 // UI
+import ItemWrapper from '../components/layout/item-layout/item-wrapper'
+import ItemHeading from '../components/layout/item-layout/item-heading'
 import Button from '../components/ui/button'
 import { faExternalLinkAlt, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
+// Content
 import defaultItem from '../images/portfolio-items/default-item.jpg'
-
-const ItemWrapper = styled.div`
-    width: 80vw;
-    padding: 7vh 0 14vh 0;
-    display: flex;
-    flex-direction: column;
-`
-
-const ItemHeading = styled.h3`
-    font-size: 1.2rem;
-    color: ${props => props.theme.colors.vibrantBlue};
-    text-align: center;
-    padding-bottom: 3vh;
-`
 
 const ItemContentContainer = styled.div`
     display: flex;

@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import Wrapper from '../components/layout/wrapper'
 // UI
 import Heading from '../components/ui/heading'
+// Content
+import InterestItem from '../templates/interest-item'
+
 
 const Interests = () => {
     return (
@@ -12,6 +15,7 @@ const Interests = () => {
                 title="interests"
                 subtitle="Now that you’ve seen my work, what else do I enjoy doing?"
             />
+
         </Wrapper>
     )
 }
