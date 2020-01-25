@@ -5,14 +5,14 @@ import PropTypes from 'prop-types'
 import ItemWrapper from '../components/layout/item-layout/item-wrapper'
 import ItemHeading from '../components/layout/item-layout/item-heading'
 
-const ItemText = styled.p`
+const ItemText = styled.div`
     color: ${props => props.theme.colors.desaturatedSkyBlue};
     text-align: justify;
     font-size: 1rem;
     line-height: 1.4;
 
     & p {
-        margin: 0 0 32px 0;
+        margin-top: 0;
     }
 
     & span {

@@ -6,6 +6,7 @@ const ItemHeading = styled.h3`
     color: ${props => props.theme.colors.vibrantBlue};
     text-align: center;
     padding-bottom: 3vh;
+    margin-top: 0;
 `
 
 export default ({ children }) => (
