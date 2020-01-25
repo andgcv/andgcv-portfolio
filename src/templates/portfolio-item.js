@@ -30,9 +30,10 @@ const ItemTechContainer = styled.div`
 `
 
 const ItemDescription = styled.div`
-    color: ${props => props.theme.colors.lightSkyBlue};
+    color: ${props => props.theme.colors.desaturatedSkyBlue};
     text-align: justify;
-    text-justify: inter-word;
+    font-size: 1rem;
+    line-height: 1.4;
 
     & p {
         margin: 0 0 32px 0;
@@ -40,7 +41,7 @@ const ItemDescription = styled.div`
 
     & span {
         text-align: left;
-        color: ${props => props.theme.colors.desaturatedSkyBlue};
+        color: ${props => props.theme.colors.lightSkyBlue};
         font-weight: 500;
     }
 `

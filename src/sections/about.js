@@ -31,7 +31,6 @@ const AboutTextContainer = styled.div`
     width: 60vw;
     font-size: 1rem;
     text-align: justify;
-    text-justify: justify;
     line-height: 1.4;
     color: ${props => props.theme.colors.desaturatedSkyBlue};
 
