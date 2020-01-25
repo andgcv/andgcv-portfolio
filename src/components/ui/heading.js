@@ -29,7 +29,7 @@ const Heading = (props) => {
     return (
         <HeadingWrapper>
             <Title>
-                <span>&#x7b;</span>{props.title}<span>&#x7d;</span>
+                <span>&#x7b;</span>&#x22;{props.title}&#x22;<span>&#x7d;</span>
             </Title>
             <SubTitle>{props.subtitle}</SubTitle>
         </HeadingWrapper>

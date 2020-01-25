@@ -15,7 +15,7 @@ import CliNotes from '../images/portfolio-items/cli-notes.jpg'
 const Portfolio = () => {
     return (
         <Wrapper id="portfolio-section">
-            <Heading title='"portfolio"' subtitle="Let’s see what I’ve been up to lately." />
+            <Heading title="portfolio" subtitle="Let’s see what I’ve been up to lately." />
             <PortfolioItem 
                 title='(WiP) "Web Application": "Andgcv Portfolio"' 
                 imgSrc={MyWebsite}

@@ -14,6 +14,7 @@ const IndexPage = () => {
             <Home />
             <About />
             <Portfolio />
+            <Interests />
         </Layout>
     )
 }

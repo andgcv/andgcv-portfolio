@@ -75,10 +75,10 @@ const NavBar = () => {
             </BrandContainer>
             <SectionsContainer>
                 <span>&#x7b;</span>
-                <Link to="about-section" smooth={true} spy={true}>"about me"</Link>
-                <Link to="portfolio-section" smooth={true} spy={true}>"portfolio"</Link>
-                <Link to="interests-section" smooth={true} spy={true}>"interests"</Link>
-                <Link to="contact-section" smooth={true} spy={true}>"contact"</Link>
+                <Link to="about-section" smooth={true} spy={true}>&#x22;about me&#x22;</Link>
+                <Link to="portfolio-section" smooth={true} spy={true}>&#x22;portfolio&#x22;</Link>
+                <Link to="interests-section" smooth={true} spy={true}>&#x22;interests&#x22;</Link>
+                <Link to="contact-section" smooth={true} spy={true}>&#x22;contact&#x22;</Link>
                 <span>&#x7d;</span>
             </SectionsContainer>
         </NavBarWrapper>

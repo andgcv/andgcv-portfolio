@@ -81,7 +81,7 @@ const About = () => {
     return (
         <Wrapper id="about-section">
             <Heading 
-                title='"about me"' 
+                title="about me"
                 subtitle="So you do want to know more about me, that's wonderful!" />
             <AboutContainer>
                 <Banner src={bannerPhoto} alt="Photo of me" />
