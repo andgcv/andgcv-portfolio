@@ -10,7 +10,7 @@ const GalleryWrapper = styled.div`
     background-color: ${props => props.theme.colors.lightSkyBlue}
 `
 
-const PhotoGallery = () => {
+const WorkGallery = () => {
     return (
         <GalleryWrapper>
 
@@ -18,4 +18,4 @@ const PhotoGallery = () => {
     )
 }
 
-export default PhotoGallery
+export default WorkGallery
