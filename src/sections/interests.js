@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 // Layout
 import Wrapper from '../components/layout/wrapper'
 // UI

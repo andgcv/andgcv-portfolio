@@ -6,7 +6,7 @@ import Home from '../sections/home'
 import About from '../sections/about'
 import Portfolio from '../sections/portfolio'
 import Interests from '../sections/interests'
-import Contacts from '../sections/contact'
+import Contact from '../sections/contact'
 
 const IndexPage = () => {
     return (
@@ -15,6 +15,7 @@ const IndexPage = () => {
             <About />
             <Portfolio />
             <Interests />
+            <Contact />
         </Layout>
     )
 }
