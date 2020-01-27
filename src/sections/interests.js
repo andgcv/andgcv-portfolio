@@ -6,7 +6,6 @@ import Wrapper from '../components/layout/wrapper'
 import Heading from '../components/ui/heading'
 // Content
 import InterestItem from '../templates/interest-item'
-import WorkGallery from '../templates/work-gallery'
 
 
 const Interests = () => {
@@ -20,7 +19,6 @@ const Interests = () => {
                 <p>A passion I first discovered around 4 years ago through my Associate’s Degree in Multimedia Product Development, while I was renting camera equipment for some of my media production and post-production coursework. I decided to acquire a digital camera and start shooting as much as possible, as well as studying the theory behind the art of taking photos, and this quickly became one of the most important hobbies in my life. In conjunction with Graphic Design, this became one of the gateways for me to express my creativity, and turns out, I do have an eye for Photography! Or at least I like to think I do...</p>
                 <p>Since then, I have fully converted to analog photography, as I much prefer the whole process of buying, developing and processing the film instead of the shoot-and-pray, and instant gratification nature of digital photography. This slow, perhaps tedious, process allows me to disconnect myself from the photos I take, improving my ability to judge them in a (mostly) unbiased manner. The limited number of exposures per roll also forces me to be conscious of the photos I’m taking, which results in better content overall.</p>
             </InterestItem>
-            <WorkGallery />
             <InterestItem title="Graphic Design">
                 <p>I started to learn this craft through my Associate’s Degree, and although it is definitely not as fulfilling as photography (for me), it has proven to be crucial in various aspects in my life. Whether it is creating illustrations for friends or family, or building prototypes and designs for personal projects, graphic design has found its way into my personal or professional life, one way or other, and I welcome it! I’ve worked with it on a professional setting (in conjunction with photography), and although I wouldn’t want to build a career off graphic design, I have thoroughly enjoyed practicing and improving in this craft.</p>
             </InterestItem>
