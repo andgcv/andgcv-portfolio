@@ -18,6 +18,15 @@ const ItemText = styled.div`
     & span {
         color: ${props => props.theme.colors.lightSkyBlue};
     }
+
+    & a {
+        text-decoration: underline;
+        color: ${props => props.theme.colors.vibrantBlue};
+
+        & :hover {
+            color: ${props => props.theme.colors.lightSkyBlue};
+        }
+    }
 `
 
 const InterestItem = (props) => {
