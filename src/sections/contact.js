@@ -36,7 +36,7 @@ const SocialsContainer = styled.div`
 // TODO: Redirect email button to send email to my address
 const Contact = () => {
     return (
-        <Wrapper id="contact-section">
+        <Wrapper contact>
             <Heading
                 title="contact"
                 subtitle="Interested in getting to know me a little better?"

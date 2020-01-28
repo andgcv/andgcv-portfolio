@@ -13,6 +13,10 @@ const HomeWrapper = styled(SectionWrapper)`
     justify-content: center;
 `
 
+const ContactWrapper = styled(SectionWrapper)`
+    min-height: 90vh !important;
+`
+
 const Wrapper = (props) => {
     // If the wrapper is being used in the Home section, serve the <HomeWrapper> instead
     if (props.home) {
@@ -20,6 +24,10 @@ const Wrapper = (props) => {
             <HomeWrapper id="home-section">{props.children}</HomeWrapper>
         )
     // Else, serve the generic <SectionWrapper>
+    } else if (props.contact) {
+        return (
+            <ContactWrapper id="contact-section">{props.children}</ContactWrapper>
+        )
     } else {
         return (
             <SectionWrapper id={props.id}>{props.children}</SectionWrapper>
