@@ -23,6 +23,11 @@ const StyledButton = styled.button`
     box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
 `
 
+const EmailButton = styled(StyledButton)`
+    margin: 0 2vw 0 2vw;
+    width: 56vw !important;
+`
+
 const Button = (props) => {
     // If the Button's goal is a scroll to another section, then return a scroll link
     if (props.scroll) {
@@ -33,6 +38,16 @@ const Button = (props) => {
                     {props.text}
                 </StyledButton>
             </Link>
+        )
+    // If it's referring to the email button, return custom property values;
+    } else if (props.email) {
+        return (
+            <a href={props.destination} target="_blank" rel="noopener noreferrer">
+                <EmailButton >
+                    <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
+                    {props.text}
+                </EmailButton>
+            </a>
         )
     // If the Button's goal is a link to a file or external sources, return an <a> Button
     } else {

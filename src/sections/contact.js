@@ -21,9 +21,10 @@ const ContactContainer = styled.div`
 `
 
 const SocialsContainer = styled.div`
+    width: 60vw;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-top: 7vh;
 
@@ -43,7 +44,7 @@ const Contact = () => {
             <ContactContainer>
                 <p>Perhaps you have an offer that I just cannot refuse!
                 <br/>If that's the case, do throw me an email or connect with me on one of my social medias:</p>
-                <Button destination="" text="send me an email!" icon={faEnvelope} />
+                <Button email destination="mailto:andgcv@gmail.com" text="send me an email" icon={faEnvelope} />
                 <SocialsContainer>
                     <Button destination="https://github.com/andgcv" text="github" icon={faCode} />
                     <Button destination="https://www.linkedin.com/in/andgcv/" text="linkedin" icon={faUserTie} />
