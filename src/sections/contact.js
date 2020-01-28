@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useStaticQuery, graphql } from 'gatsby'
 // Layout
 import Wrapper from '../components/layout/wrapper'
 // UI
@@ -35,6 +36,23 @@ const SocialsContainer = styled.div`
 
 // TODO: Redirect email button to send email to my address
 const Contact = () => {
+    const { site } = useStaticQuery(
+        graphql`
+            query {
+                site {
+                    siteMetadata {
+                        social {
+                            email,
+                            github,
+                            linkedin,
+                            goodreads
+                        }
+                    }
+                }
+            }
+        `
+    )
+
     return (
         <Wrapper contact>
             <Heading
@@ -44,11 +62,11 @@ const Contact = () => {
             <ContactContainer>
                 <p>Perhaps you have an offer that I just cannot refuse!
                 <br/>If that's the case, do throw me an email or connect with me on one of my social medias:</p>
-                <Button email destination="mailto:andgcv@gmail.com" text="send me an email" icon={faEnvelope} />
+                <Button email destination={`mailto:${site.siteMetadata.social.email}`} text="send me an email" icon={faEnvelope} />
                 <SocialsContainer>
-                    <Button destination="https://github.com/andgcv" text="github" icon={faCode} />
-                    <Button destination="https://www.linkedin.com/in/andgcv/" text="linkedin" icon={faUserTie} />
-                    <Button destination="https://www.goodreads.com/andgcv" text="goodreads" icon={faBookOpen} />
+                    <Button destination={`https://github.com/${site.siteMetadata.social.github}`} text="github" icon={faCode} />
+                    <Button destination={`https://www.linkedin.com/in/${site.siteMetadata.social.github}/`} text="linkedin" icon={faUserTie} />
+                    <Button destination={`https://www.goodreads.com/${site.siteMetadata.social.github}`} text="goodreads" icon={faBookOpen} />
                 </SocialsContainer>
             </ContactContainer>
         </Wrapper>
