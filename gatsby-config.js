@@ -9,7 +9,8 @@ module.exports = {
     social: {
       email: 'andgcv@gmail.com',
       github: 'andgcv',
-      linkedin: 'andgcv'
+      linkedin: 'andgcv',
+      goodreads: 'andgcv'
     }
   },
   plugins: [

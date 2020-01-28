@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-// TODO: Maybe add socials / email ?
 const SEO = ({ meta, lang, title }) => {
     const { site } = useStaticQuery(
         graphql`
@@ -47,10 +46,6 @@ const SEO = ({ meta, lang, title }) => {
                 {
                     property: `og:description`,
                     content: metaDescription
-                },
-                {
-                    property: `og:author`,
-                    content: metaAuthor
                 },
                 {
                     property: `og:type`,
