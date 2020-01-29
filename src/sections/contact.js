@@ -34,7 +34,6 @@ const SocialsContainer = styled.div`
     }
 `
 
-// TODO: Redirect email button to send email to my address
 const Contact = () => {
     const { site } = useStaticQuery(
         graphql`

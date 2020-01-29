@@ -24,7 +24,6 @@ const StyledMain = styled.main`
     flex-direction: column;
 `
 
-// TODO: Use Footer component
 export default ({ children }) => (
     <Theme>
         <SEO />
