@@ -5,7 +5,7 @@ module.exports = {
     author: `André Gonçalves`,
     // TODO: Add url and image(logo)
     siteUrl: `localhost:8000`,
-    siteImage: ``,
+    siteImage: `favicon.ico`,
     social: {
       email: 'andgcv@gmail.com',
       github: 'andgcv',
