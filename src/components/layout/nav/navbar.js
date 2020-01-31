@@ -72,9 +72,11 @@ const SectionsContainer = styled.div`
     }
 `
 
-// TODO: Brand logo, change color of current section
+// TODO: Change color of current section
 
 const NavBar = () => {
+
+
     return (
         <NavBarWrapper>
             <BrandContainer>

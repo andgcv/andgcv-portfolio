@@ -64,7 +64,6 @@ const Button = (props) => {
 
 Button.propTypes = {
     text: PropTypes.string.isRequired,
-    icon: PropTypes.string,
     destination: PropTypes.string
 }
 

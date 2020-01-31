@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
 
 const SectionWrapper = styled.section`
     min-height: 100vh;
@@ -47,11 +46,3 @@ const Wrapper = (props) => {
 }
 
 export default Wrapper
-
-Wrapper.propTypes = {
-    id: PropTypes.string
-}
-
-Wrapper.defaultProps = {
-    id: PropTypes.string
-}
