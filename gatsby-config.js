@@ -3,9 +3,9 @@ module.exports = {
     title: `André | Software Engineer`,
     description: `I'm André, an ambitious, naturally curious Software Engineer, from Portugal.`,
     author: `André Gonçalves`,
-    // TODO: Add url and image(logo)
+    // TODO: Add url
     siteUrl: `localhost:8000`,
-    siteImage: `favicon.ico`,
+    siteImage: `brand-share.png`,
     social: {
       email: 'andgcv@gmail.com',
       github: 'andgcv',
@@ -35,11 +35,22 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto Mono`,
+            variants: [`300`, `400`, `500`, `600`],
+          },
+        ],
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `André Gonçalves | Software Engineer`,
+        name: `André | Software Engineer`,
         short_name: `André`,
-        // TODO: Add icon,
+        // TODO: Add icon
         start_url: `/`,
         background_color: `#282c37`,
         theme_color: `#2B90D9`,
