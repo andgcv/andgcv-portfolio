@@ -60,8 +60,6 @@ const SectionsContainer = styled.div`
     }
 `
 
-// TODO: Change color of current section
-
 const NavBar = () => {
 
 
