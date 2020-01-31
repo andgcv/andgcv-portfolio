@@ -1,24 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 // UI
 import ItemWrapper from '../components/layout/item-layout/item-wrapper'
 import ItemHeading from '../components/layout/item-layout/item-heading'
 import Button from '../components/ui/button'
 import { faExternalLinkAlt, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
-// Content
-import defaultItem from '../images/portfolio-items/default-item.jpg'
 
 const ItemContentContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+`
 
-    & img {
-        width: 40%;
-        object-fit: cover;
-        box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
-    }
+const ItemImg = styled(Img)`
+    width: 40%;
+    object-fit: cover;
+    box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
 `
 
 const ItemTechContainer = styled.div`
@@ -61,7 +60,7 @@ const PortfolioItem = (props) => {
             <ItemWrapper>
                 <ItemHeading>{props.title}</ItemHeading>
                 <ItemContentContainer>
-                    <img src={props.imgSrc} alt="Portfolio item screenshot" />
+                    <ItemImg fluid={props.imgSrc} title="Portfolio item screenshot" />
                     <ItemTechContainer>
                         <ItemDescription>
                             <p>{props.description}</p>
@@ -76,7 +75,7 @@ const PortfolioItem = (props) => {
             <ItemWrapper>
                 <ItemHeading>{props.title}</ItemHeading>
                 <ItemContentContainer>
-                    <img src={props.imgSrc} alt="Portfolio item screenshot" />
+                    <ItemImg fluid={props.imgSrc} title="Portfolio item screenshot" />
                     <ItemTechContainer>
                         <ItemDescription>
                             <p>{props.description}</p>
@@ -94,7 +93,7 @@ const PortfolioItem = (props) => {
             <ItemWrapper>
                 <ItemHeading>{props.title}</ItemHeading>
                 <ItemContentContainer>
-                    <img src={props.imgSrc} alt="Portfolio item screenshot" />
+                    <ItemImg fluid={props.imgSrc} title="Portfolio item screenshot" />
                     <ItemTechContainer>
                         <ItemDescription>
                             <p>{props.description}</p>
@@ -112,7 +111,7 @@ const PortfolioItem = (props) => {
             <ItemWrapper>
                 <ItemHeading>{props.title}</ItemHeading>
                 <ItemContentContainer>
-                    <img src={props.imgSrc} alt="Portfolio item screenshot" />
+                    <ItemImg fluid={props.imgSrc} title="Portfolio item screenshot" />
                     <ItemTechContainer>
                         <ItemDescription>
                             <p>{props.description}</p>
@@ -133,7 +132,7 @@ export default PortfolioItem
 
 PortfolioItem.propTypes = {
     title: PropTypes.string.isRequired,
-    imgSrc: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string,
     description: PropTypes.string.isRequired,
     techStack: PropTypes.string.isRequired,
     visitDestination: PropTypes.string,
@@ -142,7 +141,6 @@ PortfolioItem.propTypes = {
 
 PortfolioItem.defaultProps = {
     title: '"Portfolio Item": "Awesome Project"',
-    imgSrc: defaultItem,
     description: "This is an awesome project!",
     techStack: "Love"
 }

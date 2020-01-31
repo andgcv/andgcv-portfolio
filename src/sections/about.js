@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 // Layout
 import Wrapper from '../components/layout/wrapper'
 // UI
 import Heading from '../components/ui/heading'
 import Button from '../components/ui/button'
-import bannerPhoto from '../images/about-banner/me-banner.jpeg'
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
 
 const AboutContainer = styled.div`
@@ -16,7 +16,7 @@ const AboutContainer = styled.div`
     justify-content: space-between;
 `
 
-const Banner = styled.img`
+const Banner = styled(Img)`
     max-height: 650px;
     width: 15vw;
     object-fit: cover;
@@ -64,12 +64,22 @@ const AboutResumesContainer = styled.div`
 `
 
 const About = () => {
-    const { site } = useStaticQuery(
+    const { site, aboutBanner } = useStaticQuery(
         graphql`
             query {
                 site {
                     siteMetadata {
                         siteUrl
+                    }
+                }
+                aboutBanner: file(name: {eq: "me-banner"}) {
+                    childImageSharp {
+                        fluid(
+                            maxWidth: 400
+                            quality: 80
+                        ) {
+                            ...GatsbyImageSharpFluid
+                        }
                     }
                 }
             }
@@ -82,7 +92,7 @@ const About = () => {
                 title="about me"
                 subtitle="So you do want to know more about me, that's wonderful!" />
             <AboutContainer>
-                <Banner src={bannerPhoto} alt="Photo of me" />
+                <Banner fluid={aboutBanner.childImageSharp.fluid} title="Yours truly, André Gonçalves" />
                 <AboutTextContainer>
                     <p>I’m <span>André Gonçalves</span>, a 22 year old Software Engineer from Portugal.</p>
                     <p>For the longest time, I was a kid with no ambitions or aspirations. Although I have always been a cheerful person, I had no vision of what I wanted to do or become in the future, I settled for mediocre grades and had no intentions of pushing myself to become the best version I could be. In other words, <span>all I sought was comfort</span>. But then, something clicked.</p>
