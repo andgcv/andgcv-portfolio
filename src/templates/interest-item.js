@@ -21,6 +21,7 @@ const ItemText = styled.div`
 
     & a {
         text-decoration: underline;
+        transition: color 0.2s ease-in-out;
         color: ${props => props.theme.colors.vibrantBlue};
 
         & :hover {

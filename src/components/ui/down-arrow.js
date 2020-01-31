@@ -15,6 +15,7 @@ const ArrowWrapper = styled.div`
     justify-content: center;
     margin-bottom: 3rem;
     cursor: pointer;
+    transition: color 0.2s ease-in-out;
     color: ${props => props.theme.colors.desaturatedSkyBlue};
     font-size: 3rem;
 
