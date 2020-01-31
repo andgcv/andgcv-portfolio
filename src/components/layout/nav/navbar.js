@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
-// Brand Logo
-import BrandLogo from '../../../images/logo/main-logo.png'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const NavBarWrapper = styled.nav`
     position: fixed;
@@ -27,11 +27,11 @@ const NavBarWrapper = styled.nav`
 const BrandContainer = styled.div`
     padding-left: 10vw;
     padding-top: 7px;
+`
 
-    & img {
-        height: 120px;
-        cursor: pointer;
-    }
+const BrandImg = styled(Img)`
+    width: 200px;
+    cursor: pointer;
 `
 
 const SectionsContainer = styled.div`
@@ -61,12 +61,26 @@ const SectionsContainer = styled.div`
 `
 
 const NavBar = () => {
-
+    const { brandLogo } = useStaticQuery(
+        graphql`
+            query {
+                brandLogo: file(name: {eq: "main-logo"}) {
+                    childImageSharp {
+                        fluid(
+                            maxWidth: 300
+                        ) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+        `
+    )
 
     return (
         <NavBarWrapper>
             <BrandContainer>
-                <Link to="home-section" smooth={true} spy={true}><img src={BrandLogo} alt="Brand logo" /></Link>
+                <Link to="home-section" smooth={true} spy={true}><BrandImg fluid={brandLogo.childImageSharp.fluid} title="Brand logo" /></Link>
             </BrandContainer>
             <SectionsContainer>
                 <span>&#x7b;</span>

@@ -132,7 +132,6 @@ export default PortfolioItem
 
 PortfolioItem.propTypes = {
     title: PropTypes.string.isRequired,
-    imgSrc: PropTypes.string,
     description: PropTypes.string.isRequired,
     techStack: PropTypes.string.isRequired,
     visitDestination: PropTypes.string,
