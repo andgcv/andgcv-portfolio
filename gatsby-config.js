@@ -50,7 +50,7 @@ module.exports = {
       options: {
         name: `André | Software Engineer`,
         short_name: `André`,
-        // TODO: Add icon
+        icon: `/src/images/logo/main-icon.png`,
         start_url: `/`,
         background_color: `#282c37`,
         theme_color: `#2B90D9`,
