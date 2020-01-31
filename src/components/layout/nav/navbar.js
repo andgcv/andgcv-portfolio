@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
+// Brand Logo
+import BrandLogo from '../../../images/logo/main-logo.png'
 
 const NavBarWrapper = styled.nav`
     position: fixed;
@@ -11,19 +13,24 @@ const NavBarWrapper = styled.nav`
     align-items: center;
     margin: 0;
     padding: 0;
-    min-height: 6vh;
-    height: 8vh;
+    min-height: 8vh;
+    height: 10vh;
     min-width: 100vw;
     width: 100vw;
     vertical-align: middle;
     font-size: 1.1rem;
     z-index: 10;
     background-color: ${props => props.theme.colors.deepDarkBlue};
-    box-shadow: 20vw 5px ${props => props.theme.colors.lightSkyBlue};
+    box-shadow: 10vw 5px ${props => props.theme.colors.lightSkyBlue};
 `
 
 const BrandContainer = styled.div`
     padding-left: 10vw;
+    padding-top: 7px;
+
+    & img {
+        height: 120px;
+    }
 
     & a {
         color: ${props => props.theme.colors.lightSkyBlue};
@@ -71,7 +78,7 @@ const NavBar = () => {
     return (
         <NavBarWrapper>
             <BrandContainer>
-            <Link to="home-section" smooth={true} spy={true}>home</Link>
+                <Link to="home-section" smooth={true} spy={true}><img src={BrandLogo} alt="Brand logo" /></Link>
             </BrandContainer>
             <SectionsContainer>
                 <span>&#x7b;</span>

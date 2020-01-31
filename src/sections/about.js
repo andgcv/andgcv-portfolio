@@ -6,7 +6,7 @@ import Wrapper from '../components/layout/wrapper'
 // UI
 import Heading from '../components/ui/heading'
 import Button from '../components/ui/button'
-import bannerPhoto from '../images/me-banner.jpeg'
+import bannerPhoto from '../images/about-banner/me-banner.jpeg'
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
 
 const AboutContainer = styled.div`
