@@ -30,20 +30,7 @@ const BrandContainer = styled.div`
 
     & img {
         height: 120px;
-    }
-
-    & a {
-        color: ${props => props.theme.colors.lightSkyBlue};
-        text-decoration: none;
-
-        & :active {
-            color: ${props => props.theme.colors.vibrantBlue};
-        }
-
-        & :hover {
-            color: ${props => props.theme.colors.desaturatedSkyBlue};
-            cursor: pointer;
-        }
+        cursor: pointer;
     }
 `
 
@@ -53,12 +40,9 @@ const SectionsContainer = styled.div`
 
     & a {
         margin-left: 3vw;
+        transition: color 0.2s ease-in-out;
         color: ${props => props.theme.colors.lightSkyBlue};
         text-decoration: none;
-
-        & :active {
-            color: ${props => props.theme.colors.vibrantBlue};
-        }
 
         & :hover {
             color: ${props => props.theme.colors.desaturatedSkyBlue};
@@ -69,6 +53,10 @@ const SectionsContainer = styled.div`
     & span {
         margin-left: 3vw;
         color: ${props => props.theme.colors.desaturatedSkyBlue};
+    }
+
+    & .active {
+        color: ${props => props.theme.colors.vibrantBlue};
     }
 `
 
@@ -84,10 +72,10 @@ const NavBar = () => {
             </BrandContainer>
             <SectionsContainer>
                 <span>&#x7b;</span>
-                <Link to="about-section" smooth={true} spy={true}>&#x22;about me&#x22;</Link>
-                <Link to="portfolio-section" smooth={true} spy={true}>&#x22;portfolio&#x22;</Link>
-                <Link to="interests-section" smooth={true} spy={true}>&#x22;interests&#x22;</Link>
-                <Link to="contact-section" smooth={true} spy={true}>&#x22;contact&#x22;</Link>
+                <Link to="about-section" activeClass="active" smooth={true} spy={true}>&#x22;about me&#x22;</Link>
+                <Link to="portfolio-section" activeClass="active" smooth={true} spy={true}>&#x22;portfolio&#x22;</Link>
+                <Link to="interests-section" activeClass="active" smooth={true} spy={true}>&#x22;interests&#x22;</Link>
+                <Link to="contact-section" activeClass="active" smooth={true} spy={true}>&#x22;contact&#x22;</Link>
                 <span>&#x7d;</span>
             </SectionsContainer>
         </NavBarWrapper>
