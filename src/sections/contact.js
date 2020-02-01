@@ -22,15 +22,15 @@ const ContactContainer = styled.div`
 `
 
 const SocialsContainer = styled.div`
-    width: 40vw;
+    width: 80vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 4vh;
 
     & button {
-        margin: 0 0.5vw 0 0.5vw;
+        margin: 0 1vw 0 1vw;
     }
 `
 

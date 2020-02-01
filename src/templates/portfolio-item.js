@@ -50,7 +50,7 @@ const ItemButtons = styled.div`
     flex-direction: row;
 
     & button {
-        margin-right: 5vw;
+        margin-right: 2vw;
     }
 `
 

@@ -12,7 +12,7 @@ import { Link } from 'react-scroll'
 const StyledButton = styled.button`
     background-color: ${props => props.theme.colors.vibrantBlue};
     color: ${props => props.theme.colors.lightSkyBlue};
-    width: 220px;
+    width: 15vw;
     height: 80px;
     font-family: ${props => props.theme.fonts[0]};
     font-weight: 500;
@@ -22,15 +22,52 @@ const StyledButton = styled.button`
     border: none;
     box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
 
+    @media (max-width: 1055px) {
+        width: 20vw;
+    }
+
+    @media (max-width: 928px) {
+        width: 25vw;
+    }
+
+    @media (max-width: 562px) {
+        width: 30vw;
+    }
+
     ${props => props.isSmall && `
-        width: 165px;
+        width: 11vw;
         height: 60px;
         font-size: 1.1rem;
+
+        @media (max-width: 928px) {
+            width: 20vw;
+            height: 50px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 562px) {
+            width: 17vw;
+            font-size: 0.9rem;
+        }
     `}
 
     ${props => props.isBig && `
-        width: 39vw;
+        width: 37vw;
         height: 60px;
+
+        @media (max-width: 1055px) {
+            width: 64vw;
+        }
+
+        @media (max-width: 928px) {
+            height: 50px;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 562px) {
+            width: 55vw;
+            font-size: 1rem;
+        }
     `}
 `
 
