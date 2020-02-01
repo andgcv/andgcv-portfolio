@@ -8,35 +8,45 @@ const NavBarWrapper = styled.nav`
     position: fixed;
     overflow: hidden;
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 0 10vw 0 10vw;
     min-height: 8vh;
     height: 10vh;
-    min-width: 100vw;
-    width: 100vw;
-    vertical-align: middle;
+    width: 80vw;
     font-size: 1.1rem;
     z-index: 10;
     background-color: ${props => props.theme.colors.deepDarkBlue};
     box-shadow: 10vw 5px ${props => props.theme.colors.lightSkyBlue};
+
+    @media (max-width: 928px) {
+        flex-direction: column;
+        height: 20vh;
+        justify-content: start;
+    }
 `
 
 const BrandContainer = styled.div`
-    padding-left: 10vw;
     padding-top: 7px;
+    order: 0;
 `
 
 const BrandImg = styled(Img)`
     width: 200px;
     cursor: pointer;
+
+    @media (max-width: 928px) {
+        width: 150px;
+    }
 `
 
 const SectionsContainer = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+    order: 1;
     text-align: right;
-    padding-right: 10vw;
 
     & a {
         margin-left: 3vw;
@@ -57,6 +67,22 @@ const SectionsContainer = styled.div`
 
     & .active {
         color: ${props => props.theme.colors.vibrantBlue};
+    }
+
+    @media (max-width: 1055px) {
+        font-size: 1rem;
+        
+        & a {
+            margin-left: 2vw;
+        }
+    }
+    
+    @media (max-width: 928px) {
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 562px) {
+        font-size: 0.7rem;
     }
 `
 
