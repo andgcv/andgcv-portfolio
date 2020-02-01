@@ -104,8 +104,8 @@ const About = () => {
                 </AboutTextContainer>
             </AboutContainer>
             <AboutResumesContainer>
-                <Button destination={`${site.siteMetadata.siteUrl}/en-resume.pdf`} text="en resume" icon={faFileAlt} />
-                <Button destination={`${site.siteMetadata.siteUrl}/pt-resume.pdf`} text="pt resume" icon={faFileAlt} />
+                <Button small destination={`${site.siteMetadata.siteUrl}/en-resume.pdf`} text="en resume" icon={faFileAlt} />
+                <Button small destination={`${site.siteMetadata.siteUrl}/pt-resume.pdf`} text="pt resume" icon={faFileAlt} />
             </AboutResumesContainer>
         </Wrapper>
     )

@@ -82,7 +82,7 @@ const PortfolioItem = (props) => {
                             <p><span>{props.techStack}</span></p>
                         </ItemDescription>
                         <ItemButtons>
-                            <Button text="source" icon={faCodeBranch} destination={props.sourceDestination} />
+                            <Button small text="source" icon={faCodeBranch} destination={props.sourceDestination} />
                         </ItemButtons>
                     </ItemTechContainer>
                 </ItemContentContainer>
@@ -100,7 +100,7 @@ const PortfolioItem = (props) => {
                             <p><span>{props.techStack}</span></p>
                         </ItemDescription>
                         <ItemButtons>
-                            <Button text="visit" icon={faExternalLinkAlt} destination={props.visitDestination} />
+                            <Button small text="visit" icon={faExternalLinkAlt} destination={props.visitDestination} />
                         </ItemButtons>
                     </ItemTechContainer>
                 </ItemContentContainer>
@@ -118,8 +118,8 @@ const PortfolioItem = (props) => {
                             <p><span>{props.techStack}</span></p>
                         </ItemDescription>
                         <ItemButtons>
-                            <Button text="visit" icon={faExternalLinkAlt} destination={props.visitDestination} />
-                            <Button text="source" icon={faCodeBranch} destination={props.sourceDestination} />
+                            <Button small text="visit" icon={faExternalLinkAlt} destination={props.visitDestination} />
+                            <Button small text="source" icon={faCodeBranch} destination={props.sourceDestination} />
                         </ItemButtons>
                     </ItemTechContainer>
                 </ItemContentContainer>

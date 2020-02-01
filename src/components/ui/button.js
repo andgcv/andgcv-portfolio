@@ -21,11 +21,17 @@ const StyledButton = styled.button`
     cursor: pointer;
     border: none;
     box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
-`
 
-const EmailButton = styled(StyledButton)`
-    margin: 0 2vw 0 2vw;
-    width: 56vw !important;
+    ${props => props.isSmall && `
+        width: 165px;
+        height: 60px;
+        font-size: 1.1rem;
+    `}
+
+    ${props => props.isBig && `
+        width: 39vw;
+        height: 60px;
+    `}
 `
 
 const Button = (props) => {
@@ -33,7 +39,7 @@ const Button = (props) => {
     if (props.scroll) {
         return (
             <Link to={props.destination} smooth={true} spy={true}>
-                <StyledButton >
+                <StyledButton isSmall={props.small} isBig={props.big}>
                     <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
                     {props.text}
                 </StyledButton>
@@ -43,17 +49,17 @@ const Button = (props) => {
     } else if (props.email) {
         return (
             <a href={props.destination} target="_blank" rel="noopener noreferrer">
-                <EmailButton >
+                <StyledButton isSmall={props.small} isBig={props.big}>
                     <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
                     {props.text}
-                </EmailButton>
+                </StyledButton>
             </a>
         )
     // If the Button's goal is a link to a file or external sources, return an <a> Button
     } else {
         return (
             <a href={props.destination} target="_blank" rel="noopener noreferrer">
-                <StyledButton >
+                <StyledButton isSmall={props.small} isBig={props.big}>
                     <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
                     {props.text}
                 </StyledButton>

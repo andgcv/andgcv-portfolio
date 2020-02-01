@@ -22,15 +22,15 @@ const ContactContainer = styled.div`
 `
 
 const SocialsContainer = styled.div`
-    width: 60vw;
+    width: 40vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 7vh;
+    margin-top: 4vh;
 
     & button {
-        margin: 0 2vw 0 2vw;
+        margin: 0 0.5vw 0 0.5vw;
     }
 `
 
@@ -61,11 +61,11 @@ const Contact = () => {
             <ContactContainer>
                 <p>Perhaps you have an offer that I just cannot refuse!
                 <br/>If that's the case, do throw me an email or connect with me on one of my social medias:</p>
-                <Button email destination={`mailto:${site.siteMetadata.social.email}`} text="send me an email" icon={faEnvelope} />
+                <Button big destination={`mailto:${site.siteMetadata.social.email}`} text="send me an email" icon={faEnvelope} />
                 <SocialsContainer>
-                    <Button destination={`https://github.com/${site.siteMetadata.social.github}`} text="github" icon={faCode} />
-                    <Button destination={`https://www.linkedin.com/in/${site.siteMetadata.social.github}/`} text="linkedin" icon={faUserTie} />
-                    <Button destination={`https://www.goodreads.com/${site.siteMetadata.social.github}`} text="goodreads" icon={faBookOpen} />
+                    <Button small destination={`https://github.com/${site.siteMetadata.social.github}`} text="github" icon={faCode} />
+                    <Button small destination={`https://www.linkedin.com/in/${site.siteMetadata.social.github}/`} text="linkedin" icon={faUserTie} />
+                    <Button small destination={`https://www.goodreads.com/${site.siteMetadata.social.github}`} text="goodreads" icon={faBookOpen} />
                 </SocialsContainer>
             </ContactContainer>
         </Wrapper>
