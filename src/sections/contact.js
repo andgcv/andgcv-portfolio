@@ -61,11 +61,11 @@ const Contact = () => {
             <ContactContainer>
                 <p>Perhaps you have an offer that I just cannot refuse!
                 <br/>If that's the case, do throw me an email or connect with me on one of my social medias:</p>
-                <Button big destination={`mailto:${site.siteMetadata.social.email}`} text="send me an email" icon={faEnvelope} />
+                <Button big destination={`mailto:${site.siteMetadata.social.email}`} text={site.siteMetadata.social.email} icon={faEnvelope} />
                 <SocialsContainer>
                     <Button small destination={`https://github.com/${site.siteMetadata.social.github}`} text="github" icon={faCode} />
-                    <Button small destination={`https://www.linkedin.com/in/${site.siteMetadata.social.github}/`} text="linkedin" icon={faUserTie} />
-                    <Button small destination={`https://www.goodreads.com/${site.siteMetadata.social.github}`} text="goodreads" icon={faBookOpen} />
+                    <Button small destination={`https://www.linkedin.com/in/${site.siteMetadata.social.linkedin}/`} text="linkedin" icon={faUserTie} />
+                    <Button small destination={`https://www.goodreads.com/${site.siteMetadata.social.goodreads}`} text="goodreads" icon={faBookOpen} />
                 </SocialsContainer>
             </ContactContainer>
         </Wrapper>
