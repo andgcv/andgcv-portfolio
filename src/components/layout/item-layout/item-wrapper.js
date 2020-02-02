@@ -6,6 +6,10 @@ const ItemWrapper = styled.div`
     padding: 7vh 0 7vh 0;
     display: flex;
     flex-direction: column;
+
+    @media (max-height: 485px) {
+        padding: 15vh 0 15vh 0;
+    }
 `
 
 export default ({ children }) => (

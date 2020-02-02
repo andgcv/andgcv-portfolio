@@ -12,12 +12,22 @@ const ItemContentContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    @media (max-width: 562px) {
+        flex-direction: column;
+    }
 `
 
 const ItemImg = styled(Img)`
     width: 40%;
     object-fit: cover;
     box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
+
+    @media (max-width: 562px) {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 5vh;
+    }
 `
 
 const ItemTechContainer = styled.div`
@@ -26,6 +36,11 @@ const ItemTechContainer = styled.div`
     flex-direction: column;
     justify-content: space-between;
     margin-left: 5vw;
+
+    @media (max-width: 562px) {
+        width: 100%;
+        margin-left: 0;
+    }
 `
 
 const ItemDescription = styled.div`
@@ -51,6 +66,10 @@ const ItemButtons = styled.div`
 
     & button {
         margin-right: 2vw;
+    }
+
+    @media (max-width: 562px) {
+        justify-content: center;
     }
 `
 
