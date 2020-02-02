@@ -17,6 +17,16 @@ const Title = styled.h1`
     & span {
         color: ${props => props.theme.colors.lightSkyBlue};
     }
+
+    @media (max-height: 485px) {
+        font-size: 2.6rem;
+        line-height: 1.2;
+    }
+
+    @media (max-height: 405px) {
+        font-size: 2rem;
+        line-height: 1;
+    }
 `
 
 const SubTitle = styled.h2`
@@ -25,6 +35,14 @@ const SubTitle = styled.h2`
     font-size: 1.4rem;
     font-weight: 400;
     color: ${props => props.theme.colors.desaturatedSkyBlue};
+
+    @media (max-height: 485px) {
+        font-size: 1.2rem;
+    }
+
+    @media (max-height: 405px) {
+        font-size: 0.8rem;
+    }
 `
 
 const Home = () => {

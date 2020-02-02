@@ -13,8 +13,7 @@ const NavBarWrapper = styled.nav`
     align-items: center;
     margin: 0;
     padding: 0 10vw 0 10vw;
-    min-height: 8vh;
-    height: 10vh;
+    height: 70px;
     width: 80vw;
     font-size: 1.1rem;
     z-index: 10;
@@ -23,8 +22,12 @@ const NavBarWrapper = styled.nav`
 
     @media (max-width: 928px) {
         flex-direction: column;
-        height: 20vh;
+        height: 140px;
         justify-content: start;
+    }
+
+    @media (max-width: 928px) and (max-height: 485px) {
+        height: 110px;
     }
 `
 
@@ -39,6 +42,10 @@ const BrandImg = styled(Img)`
 
     @media (max-width: 928px) {
         width: 150px;
+    }
+
+    @media (max-width: 928px) and (max-height: 485px) {
+        width: 120px;
     }
 `
 

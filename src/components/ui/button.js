@@ -34,6 +34,29 @@ const StyledButton = styled.button`
         width: 30vw;
     }
 
+    @media (max-height: 485px) {
+        width: 11vw;
+        height: 60px;
+        font-size 1.1rem;
+    }
+
+    @media (max-height: 405px) {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 928px) and (max-height: 485px) {
+        width: 20vw;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    @media (max-width: 562px) and (max-height: 405px) {
+        width: 20vw;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
     ${props => props.isSmall && `
         width: 11vw;
         height: 60px;
