@@ -47,15 +47,24 @@ const SubTitle = styled(animated.h2)`
 `
 
 const Home = () => {
+    const HomeWrapperSpring = useSpring({
+        config: config.wobbly,
+        delay: 300,
+        from: {
+            opacity: 0
+        },
+        to: {
+            opacity: 1
+        }
+    })
+
     const TitleSpring = useSpring({
         config: config.wobbly,
         delay: 300,
-        from: { 
-            opacity: 0,
+        from: {
             transform: 'translateX(-100px)' 
         },
         to: {
-            opacity: 1,
             transform: 'translateX(0px)'
         }
     })
@@ -63,18 +72,16 @@ const Home = () => {
     const SubTitleSpring = useSpring({
         config: config.wobbly,
         delay: 400,
-        from: { 
-            opacity: 0,
+        from: {
             transform: 'translateX(-100px)' 
         },
         to: {
-            opacity: 1,
             transform: 'translateX(0px)'
         }
     })
 
     return (
-        <Wrapper home>
+        <Wrapper home style={HomeWrapperSpring}>
             <Title style={TitleSpring}>Hi there <span role="img" aria-label="Greeting hand emoji">✋🏻</span>
                 <br/>I'm <span>André</span></Title>
             <SubTitle style={SubTitleSpring}>An ambitious, naturally curious Software Engineer!</SubTitle>

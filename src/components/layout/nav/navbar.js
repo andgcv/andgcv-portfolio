@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
 import { useStaticQuery, graphql } from 'gatsby'
+import { useSpring, animated, config } from 'react-spring'
 import Img from 'gatsby-image'
 
-const NavBarWrapper = styled.nav`
+const NavBarWrapper = styled(animated.nav)`
     position: fixed;
     overflow: hidden;
     display: flex;
@@ -40,7 +41,7 @@ const NavBarWrapper = styled.nav`
     }
 `
 
-const BrandContainer = styled.div`
+const BrandContainer = styled(animated.div)`
     padding-top: 7px;
     order: 0;
 `
@@ -58,7 +59,7 @@ const BrandImg = styled(Img)`
     }
 `
 
-const SectionsContainer = styled.div`
+const SectionsContainer = styled(animated.div)`
     display: flex;
     flex-flow: row nowrap;
     order: 1;
@@ -119,9 +120,45 @@ const NavBar = () => {
         `
     )
 
+    const NavSpring = useSpring({
+        config: config.wobbly,
+        delay: 300,
+        from: { 
+            opacity: 0,
+        },
+        to: {
+            opacity: 1,
+        }
+    })
+
+    const BrandSpring = useSpring({
+        config: config.wobbly,
+        delay: 400,
+        from: { 
+            opacity: 0,
+            transform: 'scale(0.5)'
+        },
+        to: {
+            opacity: 1,
+            transform: 'scale(1)'
+        }
+    })
+
+    const SectionsSpring = useSpring({
+        delay: 300,
+        from: { 
+            opacity: 0,
+            transform: 'translateX(-100px)' 
+        },
+        to: {
+            opacity: 1,
+            transform: 'translateX(0px)'
+        }
+    })
+
     return (
-        <NavBarWrapper>
-            <BrandContainer>
+        <NavBarWrapper style={NavSpring}>
+            <BrandContainer style={BrandSpring}>
                 <Link to="home-section" smooth={true} spy={true}><BrandImg fluid={brandLogo.childImageSharp.fluid} title="Brand logo" /></Link>
             </BrandContainer>
             <SectionsContainer>

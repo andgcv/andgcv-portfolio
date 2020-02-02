@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { animated } from 'react-spring'
 
-const SectionWrapper = styled.section`
+const SectionWrapper = styled(animated.section)`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -30,7 +31,7 @@ const Wrapper = (props) => {
     // If the wrapper is being used in the Home section, serve the <HomeWrapper>
     if (props.home) {
         return (
-            <HomeWrapper id="home-section">{props.children}</HomeWrapper>
+            <HomeWrapper style={props.style} id="home-section">{props.children}</HomeWrapper>
         )
     // If the wrapper is being used in the Contact section, serve the <ContactWrapper>
     } else if (props.contact) {
