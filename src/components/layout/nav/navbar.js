@@ -26,6 +26,14 @@ const NavBarWrapper = styled.nav`
         justify-content: start;
     }
 
+    @media (max-height: 485px) {
+        position: static;
+    }
+
+    @media (max-width: 928px) and (max-height: 650px) {
+        position: static;
+    }
+
     @media (max-width: 928px) and (max-height: 485px) {
         height: 110px;
     }

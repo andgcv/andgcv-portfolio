@@ -19,13 +19,13 @@ const Title = styled.h1`
     }
 
     @media (max-height: 485px) {
-        font-size: 2.6rem;
+        font-size: 3rem;
         line-height: 1.2;
     }
 
     @media (max-height: 405px) {
-        font-size: 2rem;
-        line-height: 1;
+        font-size: 2.6rem;
+        line-height: 1.1;
     }
 `
 
@@ -41,7 +41,7 @@ const SubTitle = styled.h2`
     }
 
     @media (max-height: 405px) {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 `
 

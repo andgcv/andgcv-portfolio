@@ -10,6 +10,11 @@ const SectionWrapper = styled.section`
 const HomeWrapper = styled(SectionWrapper)`
     padding-left: 5vw;
     justify-content: center;
+
+    @media (max-width: 928px) and (max-height: 650px) {
+        margin-top: 5vh;
+        justify-content: start;
+    }
 `
 
 const ContactWrapper = styled(SectionWrapper)`

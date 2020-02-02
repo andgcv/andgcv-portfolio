@@ -13,7 +13,7 @@ const ArrowWrapper = styled.div`
     transform: translate(-50%, 0);
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 3vh;
     cursor: pointer;
     transition: color 0.2s ease-in-out;
     color: ${props => props.theme.colors.desaturatedSkyBlue};
@@ -21,6 +21,14 @@ const ArrowWrapper = styled.div`
 
     & :hover {
         color: ${props => props.theme.colors.vibrantBlue};
+    }
+
+    @media (max-height: 485px) {
+        visibility: hidden;
+    }
+
+    @media (max-width: 928px) and (max-height: 650px) {
+        visibility: hidden;
     }
 `
 
