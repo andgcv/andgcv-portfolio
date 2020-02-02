@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useSpring, animated, config } from 'react-spring'
 // Layout
 import Wrapper from '../components/layout/wrapper'
 // UI
 import Button from '../components/ui/button'
 import DownArrow from '../components/ui/down-arrow'
 
-const Title = styled.h1`
+const Title = styled(animated.h1)`
     margin: 0;
     margin-bottom: 4vh;
     line-height: 1.3;
@@ -29,7 +30,7 @@ const Title = styled.h1`
     }
 `
 
-const SubTitle = styled.h2`
+const SubTitle = styled(animated.h2)`
     margin: 0;
     margin-bottom: 7vh;
     font-size: 1.4rem;
@@ -46,11 +47,37 @@ const SubTitle = styled.h2`
 `
 
 const Home = () => {
+    const TitleSpring = useSpring({
+        config: config.wobbly,
+        delay: 300,
+        from: { 
+            opacity: 0,
+            transform: 'translateX(-100px)' 
+        },
+        to: {
+            opacity: 1,
+            transform: 'translateX(0px)'
+        }
+    })
+
+    const SubTitleSpring = useSpring({
+        config: config.wobbly,
+        delay: 400,
+        from: { 
+            opacity: 0,
+            transform: 'translateX(-100px)' 
+        },
+        to: {
+            opacity: 1,
+            transform: 'translateX(0px)'
+        }
+    })
+
     return (
         <Wrapper home>
-            <Title>Hi there <span role="img" aria-label="Greeting hand emoji">✋🏻</span>
+            <Title style={TitleSpring}>Hi there <span role="img" aria-label="Greeting hand emoji">✋🏻</span>
                 <br/>I'm <span>André</span></Title>
-            <SubTitle>An ambitious, naturally curious Software Engineer!</SubTitle>
+            <SubTitle style={SubTitleSpring}>An ambitious, naturally curious Software Engineer!</SubTitle>
             <Button text="about me" destination="about-section" scroll />
             <DownArrow />
         </Wrapper>
