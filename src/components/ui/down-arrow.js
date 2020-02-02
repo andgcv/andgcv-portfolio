@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useSpring, animated, config } from 'react-spring'
 // Icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 // Navigation
 import { Link } from 'react-scroll'
 
-const ArrowWrapper = styled.div`
+const ArrowWrapper = styled(animated.div)`
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -33,8 +34,21 @@ const ArrowWrapper = styled.div`
 `
 
 const DownArrow = () => {
+    const DownArrowSpring = useSpring({
+        config: config.wobbly,
+        delay: 300,
+        from: { 
+            opacity: 0,
+            transform: 'translateY(-30px)' 
+        },
+        to: {
+            opacity: 1,
+            transform: 'translateY(0px)'
+        }
+    })
+
     return (
-        <ArrowWrapper>
+        <ArrowWrapper style={DownArrowSpring}>
             <Link to="about-section" smooth={true} spy={true}>
                 <FontAwesomeIcon icon={faAngleDown} />
             </Link>
