@@ -14,14 +14,23 @@ const AboutContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 100%;
+    width: 80vw;
+
+    @media (max-width: 562px) {
+        flex-direction: column;
+    }
 `
 
 const Banner = styled(Img)`
     max-height: 650px;
     width: 15vw;
-    object-fit: cover;
     border: none;
     box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
+
+    @media (max-width: 562px) {
+        display: none;
+    }
 `
 
 const AboutTextContainer = styled.div`
@@ -50,6 +59,11 @@ const AboutTextContainer = styled.div`
         & :hover {
             color: ${props => props.theme.colors.lightSkyBlue};
         }
+    }
+
+    @media (max-width: 562px) {
+        width: 80vw;
+        padding-left: 0;
     }
 `
 

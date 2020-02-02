@@ -24,6 +24,7 @@ const NavBarWrapper = styled.nav`
         flex-direction: column;
         height: 140px;
         justify-content: start;
+        position: static;
     }
 
     @media (max-height: 485px) {
