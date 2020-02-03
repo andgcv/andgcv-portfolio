@@ -26,14 +26,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
-        ignore: [`**/\.*`],
-      },
-    },
-    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [

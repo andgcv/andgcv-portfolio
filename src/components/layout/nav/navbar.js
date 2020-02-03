@@ -144,18 +144,6 @@ const NavBar = () => {
         }
     })
 
-    const SectionsSpring = useSpring({
-        delay: 300,
-        from: { 
-            opacity: 0,
-            transform: 'translateX(-100px)' 
-        },
-        to: {
-            opacity: 1,
-            transform: 'translateX(0px)'
-        }
-    })
-
     return (
         <NavBarWrapper style={NavSpring}>
             <BrandContainer style={BrandSpring}>
