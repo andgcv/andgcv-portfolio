@@ -7,9 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // Navigation
 import { Link } from 'react-scroll'
 
-
-/* TODO: 3 Buttons, 1 small, 1 medium, 1 large
-   Each of these buttons will have media queries */
 const StyledButton = styled(animated.button)`
     background-color: ${props => props.theme.colors.vibrantBlue};
     color: ${props => props.theme.colors.lightSkyBlue};

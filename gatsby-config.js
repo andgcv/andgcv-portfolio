@@ -3,8 +3,7 @@ module.exports = {
     title: `André | Software Engineer`,
     description: `I'm André, an ambitious, naturally curious Software Engineer, from Portugal.`,
     author: `André Gonçalves`,
-    // TODO: Add url
-    siteUrl: `localhost:8000`,
+    siteUrl: `https://andgcv.com`,
     siteImage: `brand-share.png`,
     social: {
       email: 'andgcv@gmail.com',
