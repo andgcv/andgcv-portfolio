@@ -79,9 +79,9 @@ const Portfolio = () => {
         <Wrapper id="portfolio-section">
             <Heading title="portfolio" subtitle="Let’s see what I’ve been up to lately." />
             <PortfolioItem 
-                title='(WiP) "Web Application": "Andgcv Portfolio"' 
+                title='"Website": "Andgcv Portfolio"' 
                 imgSrc={itemImage.myWebsite.childImageSharp.fluid}
-                description="This exact web application! My personal website where you can connect with me, get to know me a little better and see what I’ve been up to lately! I wanted something easy to use, easy to maintain and with good SEO, and considering the fact that I had previous experience with React, Gatsby seemed like a great fit!"
+                description="This exact website! My personal website where you can connect with me, get to know me a little better and see what I’ve been up to lately! I wanted something easy to use, easy to maintain and with good SEO, and considering the fact that I had previous experience with React, Gatsby seemed like a great fit!"
                 techStack="React - Gatsby - Styled-components - Git"
                 noVisit
                 sourceDestination="https://github.com/andgcv/andgcv-portfolio#readme"

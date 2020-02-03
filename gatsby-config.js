@@ -3,7 +3,7 @@ module.exports = {
     title: `André | Software Engineer`,
     description: `I'm André, an ambitious, naturally curious Software Engineer, from Portugal.`,
     author: `André Gonçalves`,
-    siteUrl: `https://andgcv.com`,
+    siteUrl: `https://www.andgcv.com`,
     siteImage: `brand-share.png`,
     social: {
       email: 'andgcv@gmail.com',
