@@ -21,6 +21,16 @@ const Portfolio = () => {
                         }
                     }
                 }
+                taskManager: file(name: {eq: "task-manager"}) {
+                    childImageSharp {
+                        fluid(
+                            maxWidth: 800
+                            quality: 90
+                        ) {
+                            ...GatsbyImageSharpFluid_withWebp
+                        }
+                    }
+                }
                 weatherForecast: file(name: {eq: "weather-forecast"}) {
                     childImageSharp {
                         fluid(
@@ -82,13 +92,13 @@ const Portfolio = () => {
                 title='"Website": "Andgcv Portfolio"' 
                 imgSrc={itemImage.myWebsite.childImageSharp.fluid}
                 description="This exact website! My personal website where you can connect with me, get to know me a little better and see what I’ve been up to lately! I wanted something easy to use, easy to maintain and with good SEO, and considering the fact that I had previous experience with React, Gatsby seemed like a great fit!"
-                techStack="React - Gatsby - Styled-components - Git"
+                techStack="React - Gatsby - GraphQL - Styled-components - Git"
                 noVisit
                 sourceDestination="https://github.com/andgcv/andgcv-portfolio#readme"
             />
             <PortfolioItem 
                 title='(WiP) "Web Application": "Task Management"'
-                imgSrc={itemImage.defaultItem.childImageSharp.fluid} 
+                imgSrc={itemImage.taskManager.childImageSharp.fluid} 
                 description="A web application for authenticated Users to create and manage the Tasks associated with their accounts. For the longest time I wanted to mess around with an authentication system, so I decided to go with a Task Management application where I developed a RESTful API to allow the users the ability to perform certain CRUD operations regarding their tasks. I was also able to apply various industry standards for authentication and security of data, such as utilising Bcrypt for password hashing and storing, as well as JSON Web Tokens for CRUD authentication."
                 techStack="Node.js - Express - MongoDB - Mongoose - Git"
                 noVisit
