@@ -11,6 +11,6 @@ My personal website where you can connect with me, get to know me a little bette
 
 <h4 align="center">React - Gatsby - GraphQL - Styled-components - Git</h4>
 
-<h2 align="center"><a href="https://www.andgcv.com/" target="_blank" rel="noopener noreferrer">Check it live here</a></h2>
+<h2 align="center"><a href="https://www.andgcv.com/">Check it live here</a></h2>
 
 ![Thumbnail](thumbnail.png)
