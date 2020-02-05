@@ -16,12 +16,28 @@ const Title = styled.h1`
         color: ${props => props.theme.colors.lightSkyBlue};
         margin: 0 3vw;
     }
+
+    @media (max-width: 562px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 1.7rem;
+    }
 `
 
 const SubTitle = styled.h2`
     color: ${props => props.theme.colors.lightSkyBlue};
     font-weight: 400;
     font-size: 1.4rem;
+
+    @media (max-width: 562px) {
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 1rem;
+    }
 `
 
 
