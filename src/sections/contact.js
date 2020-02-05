@@ -18,6 +18,16 @@ const ContactContainer = styled.div`
         text-align: center;
         color: ${props => props.theme.colors.desaturatedSkyBlue};
         margin-bottom: 7vh;
+
+        @media (max-width: 562px) {
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 360px) {
+            font-size: 1rem;
+            text-align: justify;
+            text-justify: inter-word;
+        }
     }
 `
 
