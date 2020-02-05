@@ -29,7 +29,15 @@ const StyledButton = styled(animated.button)`
     }
 
     @media (max-width: 562px) {
-        width: 30vw;
+        font-size: 1.3rem;
+        width: 40vw;
+        height: 70px;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 1.2rem;
+        width: 50vw;
+        height: 60px;
     }
 
     @media (max-height: 485px) {
@@ -67,14 +75,19 @@ const StyledButton = styled(animated.button)`
         }
 
         @media (max-width: 562px) {
-            width: 17vw;
+            width: 25vw;
             font-size: 0.9rem;
+        }
+
+        @media (max-width: 360px) {
+            font-size: 0.8rem;
         }
     `}
 
     ${props => props.isBig && `
         width: 37vw;
         height: 60px;
+        margin-left: 1vw;
 
         @media (max-width: 1055px) {
             width: 64vw;
@@ -86,7 +99,7 @@ const StyledButton = styled(animated.button)`
         }
 
         @media (max-width: 562px) {
-            width: 55vw;
+            width: 78vw;
             font-size: 1rem;
         }
     `}
@@ -113,16 +126,6 @@ const Button = (props) => {
                     {props.text}
                 </StyledButton>
             </Link>
-        )
-    // If it's referring to the email button, return custom property values;
-    } else if (props.email) {
-        return (
-            <a href={props.destination} target="_blank" rel="noopener noreferrer">
-                <StyledButton style={ButtonSpring} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} isSmall={props.small} isBig={props.big}>
-                    <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
-                    {props.text}
-                </StyledButton>
-            </a>
         )
     // If the Button's goal is a link to a file or external sources, return an <a> Button
     } else {
