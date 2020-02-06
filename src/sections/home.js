@@ -28,6 +28,19 @@ const Title = styled(animated.h1)`
         font-size: 2.6rem;
         line-height: 1.1;
     }
+
+    @media (max-width: 562px) {
+        font-size 3.2rem;
+        line-height: 1.2;
+    }
+
+    @media (max-width: 440px) {
+        font-size 2.6rem;
+    }
+
+    @media (max-width: 360px) {
+        font-size 2.2rem;
+    }
 `
 
 const SubTitle = styled(animated.h2)`
@@ -43,6 +56,14 @@ const SubTitle = styled(animated.h2)`
 
     @media (max-height: 405px) {
         font-size: 1rem;
+    }
+
+    @media (max-width: 562px) {
+        font-size 1.2rem;
+    }
+
+    @media (max-width: 440px) {
+        font-size 1rem;
     }
 `
 
