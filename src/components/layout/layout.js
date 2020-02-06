@@ -17,6 +17,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: stretch;
+
+    @media (max-width: 562px) {
+        max-width: 90vw;
+    }
 `
 
 const StyledMain = styled.main`

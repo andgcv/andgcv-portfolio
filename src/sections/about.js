@@ -18,7 +18,7 @@ const AboutContainer = styled.div`
     width: 80vw;
 
     @media (max-width: 562px) {
-        flex-direction: column;
+        width: 90vw;
     }
 `
 
@@ -62,7 +62,7 @@ const AboutTextContainer = styled.div`
     }
 
     @media (max-width: 562px) {
-        width: 80vw;
+        width: 90vw;
         padding-left: 0;
     }
 `

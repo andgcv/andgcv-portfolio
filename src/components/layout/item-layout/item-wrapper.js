@@ -10,6 +10,10 @@ const ItemWrapper = styled.div`
     @media (max-height: 485px) {
         padding: 15vh 0 15vh 0;
     }
+
+    @media (max-width: 562px) {
+        width: 90vw;
+    }
 `
 
 export default ({ children }) => (
