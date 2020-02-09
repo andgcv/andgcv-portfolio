@@ -9,12 +9,9 @@ import { Link } from 'react-scroll'
 
 const ArrowWrapper = styled(animated.div)`
     position: absolute;
+    bottom: 3vh;
     left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 0);
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3vh;
+    margin-left: -16px;
     cursor: pointer;
     transition: color 0.2s ease-in-out;
     color: ${props => props.theme.colors.desaturatedSkyBlue};
