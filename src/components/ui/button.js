@@ -7,18 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // Navigation
 import { Link } from 'react-scroll'
 
-const StyledButton = styled(animated.button)`
-    background-color: ${props => props.theme.colors.vibrantBlue};
-    color: ${props => props.theme.colors.lightSkyBlue};
+const StyledLink = styled(Link)`
     width: 15vw;
     height: 80px;
-    font-family: ${props => props.theme.fonts[0]};
-    font-weight: 500;
-    font-size: 1.4rem;
-    padding: 0.25vh 1vw;
-    cursor: pointer;
-    border: none;
-    box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
 
     @media (max-width: 1055px) {
         width: 20vw;
@@ -29,13 +20,11 @@ const StyledButton = styled(animated.button)`
     }
 
     @media (max-width: 562px) {
-        font-size: 1.3rem;
         width: 40vw;
         height: 70px;
     }
 
     @media (max-width: 360px) {
-        font-size: 1.2rem;
         width: 50vw;
         height: 60px;
     }
@@ -43,23 +32,57 @@ const StyledButton = styled(animated.button)`
     @media (max-height: 485px) {
         width: 11vw;
         height: 60px;
-        font-size 1.1rem;
     }
 
     @media (max-height: 405px) {
         height: 40px;
-        font-size: 0.9rem;
     }
 
     @media (max-width: 928px) and (max-height: 485px) {
         width: 20vw;
         height: 50px;
-        font-size: 1rem;
     }
 
     @media (max-width: 562px) and (max-height: 405px) {
         width: 20vw;
         height: 40px;
+    }
+`
+
+const StyledButton = styled(animated.button)`
+    background-color: ${props => props.theme.colors.vibrantBlue};
+    color: ${props => props.theme.colors.lightSkyBlue};
+    width: 100%;
+    height: 100%;
+    font-family: ${props => props.theme.fonts[0]};
+    font-weight: 500;
+    font-size: 1.4rem;
+    padding: 0.25vh 1vw;
+    cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px ${props => props.theme.colors.lightSkyBlue};
+
+    @media (max-width: 562px) {
+        font-size: 1.3rem;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 1.2rem;
+    }
+
+    @media (max-height: 485px) {
+        font-size 1.1rem;
+    }
+
+    @media (max-height: 405px) {
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 928px) and (max-height: 485px) {
+        font-size: 1rem;
+    }
+
+    @media (max-width: 562px) and (max-height: 405px) {
         font-size: 0.9rem;
     }
 
@@ -120,12 +143,12 @@ const Button = (props) => {
     // If the Button's goal is a scroll to another section, then return a scroll link
     if (props.scroll) {
         return (
-            <Link to={props.destination} smooth={true} spy={true}>
+            <StyledLink to={props.destination} smooth={true} spy={true}>
                 <StyledButton style={ButtonSpring} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} isSmall={props.small} isBig={props.big}>
                     <FontAwesomeIcon icon={props.icon} style={{marginRight: 1 + 'vw'}} />
                     {props.text}
                 </StyledButton>
-            </Link>
+            </StyledLink>
         )
     // If the Button's goal is a link to a file or external sources, return an <a> Button
     } else {
