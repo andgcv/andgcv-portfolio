@@ -110,13 +110,9 @@ const StyledButton = styled(animated.button)`
     ${props => props.isBig && `
         width: 37vw;
         height: 60px;
-        margin-left: 1vw;
-
-        @media (max-width: 1055px) {
-            width: 64vw;
-        }
 
         @media (max-width: 928px) {
+            width: 64vw;
             height: 50px;
             font-size: 1.2rem;
         }
