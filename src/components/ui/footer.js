@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const currentYear = new Date().getFullYear();
+
 const StyledFooter = styled.footer`
     height: 10vh;
     text-align: center;
@@ -12,7 +14,7 @@ const StyledFooter = styled.footer`
 const Footer = () => {
     return (
         <StyledFooter>
-            <p>Copyright © 2020 - André Gonçalves</p>
+            <p>Copyright © ${currentYear} - André Gonçalves</p>
         </StyledFooter>
     )
 }
