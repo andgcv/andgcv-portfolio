@@ -14,7 +14,7 @@ const StyledFooter = styled.footer`
 const Footer = () => {
     return (
         <StyledFooter>
-            <p>Copyright © ${currentYear} - André Gonçalves</p>
+            <p>Copyright © {currentYear} - André Gonçalves</p>
         </StyledFooter>
     )
 }
