@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Wrapper from '../components/layout/wrapper'
 // UI
 import Heading from '../components/ui/heading'
+import PortfolioSection from '../components/ui/portfolio-section'
 // Content
 import PortfolioItem from '../templates/portfolio-item'
 
@@ -88,6 +89,10 @@ const Portfolio = () => {
     return (
         <Wrapper id="portfolio-section">
             <Heading title="portfolio" subtitle="Let’s see what I’ve been up to lately." />
+            
+            <PortfolioSection section='Work Experience' />
+
+            <PortfolioSection section='Personal Projects' />
             <PortfolioItem 
                 title='"Website": "Andgcv Portfolio"' 
                 imgSrc={itemImage.myWebsite.childImageSharp.fluid}
