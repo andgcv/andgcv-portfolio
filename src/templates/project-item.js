@@ -73,13 +73,13 @@ const ItemButtons = styled.div`
     }
 `
 
-const PortfolioItem = (props) => {
+const ProjectItem = (props) => {
     if (props.noVisit && props.noSource) {
         return (
             <ItemWrapper>
                 <ItemHeading>{props.title}</ItemHeading>
                 <ItemContentContainer>
-                    <ItemImg fluid={props.imgSrc} title="Portfolio item screenshot" />
+                    <ItemImg fluid={props.imgSrc} title="Project item screenshot" />
                     <ItemTechContainer>
                         <ItemDescription>
                             <p>{props.description}</p>
@@ -94,7 +94,7 @@ const PortfolioItem = (props) => {
             <ItemWrapper>
                 <ItemHeading>{props.title}</ItemHeading>
                 <ItemContentContainer>
-                    <ItemImg fluid={props.imgSrc} title="Portfolio item screenshot" />
+                    <ItemImg fluid={props.imgSrc} title="Project item screenshot" />
                     <ItemTechContainer>
                         <ItemDescription>
                             <p>{props.description}</p>
@@ -112,7 +112,7 @@ const PortfolioItem = (props) => {
             <ItemWrapper>
                 <ItemHeading>{props.title}</ItemHeading>
                 <ItemContentContainer>
-                    <ItemImg fluid={props.imgSrc} title="Portfolio item screenshot" />
+                    <ItemImg fluid={props.imgSrc} title="Project item screenshot" />
                     <ItemTechContainer>
                         <ItemDescription>
                             <p>{props.description}</p>
@@ -130,7 +130,7 @@ const PortfolioItem = (props) => {
             <ItemWrapper>
                 <ItemHeading>{props.title}</ItemHeading>
                 <ItemContentContainer>
-                    <ItemImg fluid={props.imgSrc} title="Portfolio item screenshot" />
+                    <ItemImg fluid={props.imgSrc} title="Project item screenshot" />
                     <ItemTechContainer>
                         <ItemDescription>
                             <p>{props.description}</p>
@@ -147,9 +147,9 @@ const PortfolioItem = (props) => {
     }
 }
 
-export default PortfolioItem
+export default ProjectItem
 
-PortfolioItem.propTypes = {
+ProjectItem.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     techStack: PropTypes.string.isRequired,
@@ -157,8 +157,8 @@ PortfolioItem.propTypes = {
     sourceDestination: PropTypes.string
 }
 
-PortfolioItem.defaultProps = {
-    title: '"Portfolio Item": "Awesome Project"',
+ProjectItem.defaultProps = {
+    title: '"Project Item": "Awesome Project"',
     description: "This is an awesome project!",
     techStack: "Love"
 }
