@@ -114,6 +114,7 @@ const Portfolio = () => {
             <PortfolioSection section='Work Experience'/>
             <WorkItem 
                 title='"Critical TechWorks, BMW Group": "Retail Integration Services"'
+                timeline='Dec 2020 - Presents'
                 listItemOne='Eliminated frequent downtimes experienced by our services by driving the Proof of Concept and implementation of a new Azure Application Gateway load balacing solution for newly created AKS clusters.'
                 listItemTwo='Improved our API debugging and performance assessment processes by creating and deploying mocks services which mimic third-party solutions’ input and output.'
                 listItemThree='Constant participation in the development of cross-departmental integration projects and cooperation with external partners for production incident-handling.
