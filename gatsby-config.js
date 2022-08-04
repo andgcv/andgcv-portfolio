@@ -6,11 +6,11 @@ module.exports = {
     siteUrl: `https://www.andgcv.com`,
     siteImage: `brand-share.png`,
     social: {
-      email: 'andgcv@gmail.com',
-      github: 'andgcv',
-      linkedin: 'andgcv',
-      goodreads: 'andgcv'
-    }
+      email: "andgcv@gmail.com",
+      github: "andgcv",
+      linkedin: "andgcv",
+      goodreads: "andgcv",
+    },
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -28,11 +28,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-            `Roboto Mono\:300,400,500,600`,
-        ],
-        display: 'swap'
-      }
+        fonts: [`Roboto Mono\:300,400,500,600`],
+        display: "swap",
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -46,6 +44,6 @@ module.exports = {
         display: `standalone`,
       },
     },
-    `gatsby-plugin-offline`
-  ]
+    `gatsby-plugin-offline`,
+  ],
 }
